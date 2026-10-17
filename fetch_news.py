@@ -1,10 +1,10 @@
-"""25 categories x 5 cards: RSS -> dedupe -> rank -> LLM summaries -> docs/news.json"""
+"""Saransh: 25 categories x 15 cards: RSS -> dedupe -> rank -> LLM summaries -> docs/news.json"""
 import feedparser, json, os, re, html, time, socket, datetime as dt
 from calendar import timegm
 from urllib.parse import urlparse
 
-socket.setdefaulttimeout(15)
-feedparser.USER_AGENT = "Mozilla/5.0 (compatible; BriefNewsBot/1.0)"
+socket.setdefaulttimeout(10)
+feedparser.USER_AGENT = "Mozilla/5.0 (compatible; SaranshBot/1.0)"
 G = lambda p: f"https://www.theguardian.com/{p}/rss"
 H = lambda p: f"https://www.thehindu.com/{p}/feeder/default.rss"
 B = lambda p: f"https://feeds.bbci.co.uk/{p}/rss.xml"
@@ -24,17 +24,17 @@ CATS = {
  "Science": [B("news/science_and_environment"), "https://www.sciencedaily.com/rss/top.xml", "https://www.nature.com/nature.rss"],
  "Space": ["https://www.nasa.gov/feed/", G("science/space"), "https://www.space.com/feeds/all"],
  "Technology": [B("news/technology"), G("technology"), H("sci-tech")],
- "AI": [G("technology/artificialintelligence"), "https://www.technologyreview.com/topic/artificial-intelligence/feed"],
+ "AI": [G("technology/artificialintelligence"), "https://www.technologyreview.com/topic/artificial-intelligence/feed", "https://venturebeat.com/category/ai/feed/", "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"],
  "Health": [B("news/health"), "https://www.who.int/rss-feeds/news-english.xml", H("sci-tech/health")],
- "Law & Justice": [G("law"), "https://www.livelaw.in/rss/"],
+ "Law & Justice": [G("law"), "https://www.livelaw.in/rss/", "https://www.barandbench.com/feed"],
  "Society": [G("society"), H("society"), B("news/uk")],
  "Literature": [G("books"), H("books"), N(1032)],
  "Arts & Culture": [G("culture"), G("artanddesign"), H("entertainment/art")],
  "Film & TV": [G("film"), G("tv-and-radio"), H("entertainment/movies")],
  "Music": [G("music"), H("entertainment/music"), N(1039)],
  "Sports": [B("sport"), G("sport"), H("sport")],
- "Food": [G("food"), H("life-and-style/food")],
- "Travel": [G("travel"), H("life-and-style/travel")],
+ "Food": [G("food"), H("life-and-style/food"), N(1053)],
+ "Travel": [G("travel"), H("life-and-style/travel"), B("travel")],
  "Lifestyle": [G("lifeandstyle"), H("life-and-style")],
  "Opinion": [G("commentisfree"), H("opinion"), "https://indianexpress.com/section/opinion/feed/"],
 }
@@ -42,8 +42,8 @@ NAMES = {"bbci.co.uk": "BBC", "theguardian.com": "The Guardian", "thehindu.com":
  "indianexpress.com": "Indian Express", "npr.org": "NPR", "pib.gov.in": "PIB", "mongabay.com": "Mongabay",
  "downtoearth.org.in": "Down To Earth", "carbonbrief.org": "Carbon Brief", "sciencedaily.com": "ScienceDaily",
  "nature.com": "Nature", "nasa.gov": "NASA", "space.com": "Space.com", "technologyreview.com": "MIT Tech Review",
- "who.int": "WHO", "livelaw.in": "LiveLaw"}
-PER_CAT, TOP_N, TOP_PER_CAT, MAX_AGE_H, CHUNK = 5, 12, 2, 72, 25
+ "who.int": "WHO", "livelaw.in": "LiveLaw", "barandbench.com": "Bar & Bench", "venturebeat.com": "VentureBeat", "theverge.com": "The Verge"}
+PER_CAT, TOP_N, TOP_PER_CAT, MAX_AGE_H, CHUNK = 15, 12, 2, 168, 25   # 15 cards/category, 7-day window
 MODEL = os.getenv("MODEL", "claude-haiku-5-5")
 PROMPT = ("You are a neutral news editor. For each story write: headline (max 90 chars), "
  "summary (2-3 sentences, max 55 words, ONLY facts present in the input - add nothing), "
@@ -62,7 +62,7 @@ def collect():
         for url in urls:
             got = 0
             try:
-                for e in feedparser.parse(url).entries[:12]:
+                for e in feedparser.parse(url).entries[:30]:
                     t = e.get("published_parsed") or e.get("updated_parsed")
                     ts = timegm(t) if t else now
                     if now - ts > MAX_AGE_H * 3600 or not e.get("title"): continue

@@ -1,21 +1,20 @@
-# Brief - 25 categories x 5 cards, refreshed daily at ~6 AM IST
+# सारांश · Saransh - 25 categories x 15 cards, refreshed daily ~6 AM IST
 
-## Layout (repo root)
-- `fetch_news.py`  - pulls RSS feeds, dedupes, ranks, summarises, writes `docs/news.json`
-- `context.json`   - background/history cards (add `"cat": "<category>"` to tie one to a category)
-- `docs/index.html`- the app (served by GitHub Pages)
-- `.github/workflows/news.yml` - the daily job
+## Repo layout (upload to repo root)
+- `fetch_news.py`   pulls RSS feeds, dedupes, ranks, summarises, writes `docs/news.json`
+- `context.json`    background/history cards (add `"cat": "<category>"` to tie one to a category)
+- `docs/index.html` the app (GitHub Pages) + `manifest.webmanifest`, `sw.js`, `icon*.png/svg` (install + offline)
+- `.github/workflows/news.yml` the daily job (00:30 UTC = 6:00 AM IST)
 
 ## Setup
-1. Upload everything to the repo root (keep the folder structure, including `.github/`).
-2. Settings > Pages > Deploy from branch > `main` / `/docs`.
-3. Optional: Settings > Secrets and variables > Actions > secret `ANTHROPIC_API_KEY` (needs API credits in the Claude Console). Without it, cards show raw RSS snippets.
-4. Actions > "Update news" > Run workflow. Then it runs daily at 00:30 UTC (6:00 AM IST).
+1. Settings > Pages > Deploy from branch > `main` / `/docs`.
+2. Optional: Settings > Secrets and variables > Actions > `ANTHROPIC_API_KEY` (needs Console credits). Without it, cards show raw RSS snippets.
+3. Actions > "Update news" > Run workflow.
 
-## Tuning
-- Categories and feeds: the `CATS` dict in `fetch_news.py`. The run log lists every `EMPTY/FAILED` feed - replace those URLs.
-- `PER_CAT` (cards per category), `TOP_N` (size of the Top brief), `MAX_AGE_H` (freshness window).
-- Change the schedule in `news.yml` (cron is in UTC).
-- The bot commits `docs/news.json` daily, so run `git pull` before pushing your own edits.
+## App features
+Top brief (12 stories, ~6 min) · 25 categories x 15 cards · For you (follow topics) · Learn (background cards) · search · save · share · listen · unread tracking · daily streak · text size · blue light/dark theme · installable + works offline.
 
-Only headlines/snippets are used, summaries are rewritten, and every card links to the original article.
+## Tuning (`fetch_news.py`)
+`CATS` (feeds per category; the run log prints every `EMPTY/FAILED` feed), `PER_CAT` (cards per category), `TOP_N`, `MAX_AGE_H`.
+Cost: 375 cards = 15 summarising calls/day. Lower `PER_CAT` to cut it.
+The bot commits `docs/news.json` daily - run `git pull` before pushing your own edits.

@@ -3,127 +3,192 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Brief — 5-minute news</title>
+<title>सारांश · Saransh</title>
+<meta name="theme-color" content="#1d4ed8">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
 <style>
-:root{--bg:#f6f4ef;--card:#fff;--ink:#1b1b1f;--mute:#6b6b75;--line:#e4e1d8;--acc:#c2410c;--ctx:#eef2ff;--ctxink:#3730a3;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121214;--card:#1c1c20;--ink:#f1f0ec;--mute:#9a9aa5;--line:#2c2c33;--acc:#fb923c;--ctx:#1e1b3a;--ctxink:#a5b4fc;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#121214;--card:#1c1c20;--ink:#f1f0ec;--mute:#9a9aa5;--line:#2c2c33;--acc:#fb923c;--ctx:#1e1b3a;--ctxink:#a5b4fc;color-scheme:dark}
+:root{--bg:#eaf2fc;--card:#fff;--ink:#0b1b33;--mute:#587091;--line:#d3e1f3;--acc:#1d4ed8;--acc2:#0ea5e9;--soft:#e3eeff;--ctx:#dbeafe;--ctxink:#1e3a8a;--sh:0 10px 30px rgba(29,78,216,.10);--fs:16px;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#081426;--card:#0f2038;--ink:#e6efff;--mute:#8fa8cb;--line:#1c3558;--acc:#60a5fa;--acc2:#38bdf8;--soft:#13294a;--ctx:#12294d;--ctxink:#93c5fd;--sh:0 10px 30px rgba(0,0,0,.35);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#081426;--card:#0f2038;--ink:#e6efff;--mute:#8fa8cb;--line:#1c3558;--acc:#60a5fa;--acc2:#38bdf8;--soft:#13294a;--ctx:#12294d;--ctxink:#93c5fd;--sh:0 10px 30px rgba(0,0,0,.35);color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh}
-.app{max-width:520px;margin:0 auto;padding:16px}
-header{display:flex;justify-content:space-between;align-items:center}
-header>div:last-child{display:flex;gap:6px;flex-shrink:0}
-header .btn{padding:6px 10px}
-.date{max-width:110px}
-h1{font:700 22px Georgia,serif;margin:0}
-.date{color:var(--mute);font-size:13px}
-.btn{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 12px;font-size:13px;cursor:pointer}
-.btn.on{background:var(--ink);color:var(--bg)}
-.prog{margin:14px 0 6px;height:5px;background:var(--line);border-radius:9px;overflow:hidden}
-.prog i{display:block;height:100%;width:0;background:var(--acc);transition:width .3s}
-.meta{display:flex;justify-content:space-between;color:var(--mute);font-size:12px}
-.chiprow{display:flex;gap:8px;align-items:flex-start;margin:12px 0}
-.chips{flex:1;display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;min-width:0}
-#sheet{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:20;display:flex;align-items:flex-end;justify-content:center}
-#sheet[hidden]{display:none}
-.sheet{background:var(--bg);width:100%;max-width:520px;max-height:85vh;overflow:auto;border-radius:18px 18px 0 0;padding:16px;padding-bottom:calc(16px + env(safe-area-inset-bottom,0px))}
-.sh{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
-.tile{border:1px solid var(--line);background:var(--card);border-radius:12px;padding:12px;text-align:left;color:var(--ink);cursor:pointer;font-size:14px;font-family:inherit}
-.tile small{display:block;color:var(--mute);font-size:12px}
-.tile.on{border-color:var(--acc);box-shadow:inset 0 0 0 1px var(--acc)}
-.chips .btn,.chiprow>.btn{white-space:nowrap}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;min-height:360px;display:flex;flex-direction:column;touch-action:pan-y}
-.card.ctx{background:var(--ctx)}
-.tag{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--acc)}
+body{margin:0;color:var(--ink);font:var(--fs)/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh;background:radial-gradient(900px 380px at 50% -80px,color-mix(in srgb,var(--acc2) 22%,transparent),transparent),var(--bg)}
+.app{max-width:520px;margin:0 auto;padding:14px}
+.btn{background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:7px 13px;font:inherit;font-size:.82em;cursor:pointer;white-space:nowrap}
+.btn.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.btn.sm{padding:5px 11px;font-size:.78em;background:var(--soft);border-color:transparent;color:var(--acc)}
+.hero{background:linear-gradient(135deg,#1e3a8a,#2563eb 62%,#38bdf8);color:#fff;border-radius:22px;padding:16px 16px 14px;box-shadow:var(--sh)}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.brand h1{margin:0;font:800 2em/1.1 "Noto Sans Devanagari","Nirmala UI","Mangal",system-ui,sans-serif}
+.brand span{font-size:.72em;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+.tools{display:flex;gap:6px}
+.tools .btn{background:rgba(255,255,255,.16);border-color:transparent;color:#fff;padding:6px 10px}
+.date{font-size:.78em;opacity:.85;margin-top:8px}
+.greet{font-size:.9em;margin-top:2px;font-weight:600}
+.pill{display:inline-block;background:rgba(255,255,255,.2);border-radius:999px;padding:1px 9px;margin-left:4px;font-size:.85em}
+.prog{margin:12px 0 5px;height:6px;background:rgba(255,255,255,.25);border-radius:9px;overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:#fff;border-radius:9px;transition:width .3s}
+.meta{display:flex;justify-content:space-between;font-size:.74em;opacity:.9}
+.bar{display:flex;gap:8px;margin:12px 0 2px}
+.bar .btn{flex:1}
+.chips{display:flex;gap:8px;overflow-x:auto;margin:10px 0;padding-bottom:4px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;min-height:390px;display:flex;flex-direction:column;touch-action:pan-y;box-shadow:var(--sh)}
+.card.ctx{background:linear-gradient(160deg,var(--ctx),var(--card))}
+.tag{align-self:flex-start;font-size:.72em;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--acc);background:var(--soft);padding:3px 10px;border-radius:999px}
 .ctx .tag{color:var(--ctxink)}
-.card h2{font:700 24px/1.25 Georgia,serif;margin:10px 0 12px}
+.card h2{font:700 1.5em/1.28 Georgia,serif;margin:12px 0}
 .card p{margin:0 0 12px}
-.why{border-left:3px solid var(--acc);padding-left:10px;color:var(--mute);font-size:14px}
+.why{background:var(--soft);border-left:4px solid var(--acc);border-radius:10px;padding:9px 12px;color:var(--mute);font-size:.88em}
 .ctx .why{border-color:var(--ctxink)}
-.tl{margin:6px 0;padding:0;list-style:none;font-size:14px}
+.tl{margin:6px 0 10px;padding:0;list-style:none;font-size:.88em}
 .tl li{padding:4px 0 4px 14px;border-left:2px solid var(--ctxink)}
 .tl b{color:var(--ctxink)}
-.foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;color:var(--mute);font-size:12px;padding-top:12px}
+.acts{margin-top:auto;display:flex;gap:6px;flex-wrap:wrap;padding-top:14px}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:8px;color:var(--mute);font-size:.75em;padding-top:10px;margin-top:10px;border-top:1px solid var(--line)}
+.foot a{color:var(--acc);text-decoration:none;white-space:nowrap}
+.badge{color:var(--acc);font-weight:700}
 .nav{display:flex;gap:10px;margin-top:14px}
-.nav .btn{flex:1;padding:12px;font-size:15px}
-.nav .main{background:var(--acc);border-color:var(--acc);color:#fff}
-.note{color:var(--mute);font-size:12px;text-align:center;margin-top:14px}
-.done{text-align:center;justify-content:center}
-.done h2{font-size:28px}
+.nav .btn{flex:1;padding:13px;font-size:.95em}
+.nav .main{background:linear-gradient(135deg,#1d4ed8,#0ea5e9);border:0;color:#fff;font-weight:600}
+.note{color:var(--mute);font-size:.72em;text-align:center;margin-top:14px}
+.done{text-align:center;justify-content:center;align-items:center}
+.done h2{font-size:1.8em}
+#sheet{position:fixed;inset:0;background:rgba(3,10,25,.55);z-index:20;display:flex;align-items:flex-end;justify-content:center}
+#sheet[hidden]{display:none}
+.sheet{background:var(--bg);width:100%;max-width:520px;max-height:86vh;overflow:auto;border-radius:22px 22px 0 0;padding:16px;padding-bottom:calc(16px + env(safe-area-inset-bottom,0px))}
+.sh{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.hint{color:var(--mute);font-size:.8em;margin:0 0 10px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.tile{position:relative;border:1px solid var(--line);background:var(--card);border-radius:14px;padding:12px;cursor:pointer;font-size:.9em}
+.tile b{display:block;padding-right:22px}
+.tile small{display:block;color:var(--mute);font-size:.82em}
+.tile em{color:var(--acc);font-style:normal;font-weight:700}
+.tile.on{border-color:var(--acc);box-shadow:inset 0 0 0 1px var(--acc)}
+.fol{position:absolute;top:6px;right:8px;font-size:1.15em;color:var(--acc);padding:2px 4px}
+.qi{width:100%;padding:12px 14px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;margin-bottom:10px}
+.res{display:block;width:100%;text-align:left;background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:12px;padding:10px 12px;margin-bottom:6px;font:inherit;font-size:.88em;cursor:pointer}
+.res small{color:var(--acc);font-weight:700;display:block}
 </style>
 </head>
 <body>
 <div class="app">
-<header><div><h1>Brief</h1><div class="date" id="date"></div></div><div><button class="btn" id="mapbtn">☰ Categories</button> <button class="btn" id="saved">Saved (0)</button> <button class="btn" id="theme">◐</button></div></header>
-<div class="prog"><i id="bar"></i></div>
-<div class="meta"><span id="count"></span><span id="left"></span></div>
-<div class="chiprow"><div class="chips" id="chips"></div></div>
+<div class="hero">
+ <div class="top"><div class="brand"><h1>सारांश</h1><span>Saransh · news in minutes</span></div>
+ <div class="tools"><button class="btn" id="fsb" title="Text size">Aa</button><button class="btn" id="theme" title="Theme">◐</button></div></div>
+ <div class="date" id="date"></div><div class="greet" id="greet"></div>
+ <div class="prog"><i id="bar"></i></div>
+ <div class="meta"><span id="count"></span><span id="left"></span></div>
+</div>
+<div class="bar"><button class="btn" id="mapbtn">☰ Categories</button><button class="btn" id="srch">🔍 Search</button><button class="btn" id="saved">🔖 Saved (0)</button></div>
+<div class="chips" id="chips"></div>
 <div id="stage"></div>
 <div class="nav"><button class="btn" id="prev">← Back</button><button class="btn main" id="next">Next →</button></div>
-<div id="sheet" hidden><div class="sheet"><div class="sh"><b>All categories</b><button class="btn" id="sx">✕ Close</button></div><div class="grid" id="grid"></div></div></div>
+<div id="sheet" hidden><div class="sheet"><div class="sh"><b id="shtitle"></b><button class="btn" id="sx">✕ Close</button></div><div id="shbody"></div></div></div>
 <div class="note" id="note">Swipe or use ← → keys. Showing sample stories (news.json not found).</div>
 </div>
 <script>
 const SAMPLE=[
-{c:"World",top:1,h:"Regional leaders agree on a shared climate-finance framework",s:"Delegates from several nations signed a framework to pool funds for flood and heat resilience. Contribution details are still to be finalised.",w:"It decides who pays for climate damage — and how fast money reaches affected regions.",src:"Sample",t:"2h"},
+{c:"World",top:1,h:"Regional leaders agree on a shared climate-finance framework",s:"Delegates from several nations signed a framework to pool funds for flood and heat resilience. Contribution details are still to be finalised.",w:"It decides who pays for climate damage — and how fast money reaches affected regions.",src:"Sample +2",t:"2h"},
 {c:"Business",top:1,h:"Central bank holds rates steady, signals cautious outlook",s:"The policy rate was left unchanged as inflation eased but stayed above target. Future moves depend on incoming data.",w:"Loan EMIs and savings returns stay roughly where they are for now.",src:"Sample",t:"3h"},
 {c:"Technology",top:1,h:"New open-source AI model released for on-device use",s:"A compact language model now runs on mid-range phones without a network connection. Early tests show strong speed but limited reasoning depth.",w:"Private, offline AI could reach far more people than cloud-only tools.",src:"Sample",t:"5h"},
 {c:"Science",top:1,h:"Telescope team reports a new batch of distant galaxies",s:"Astronomers catalogued dozens of faint early-universe galaxies, helping test how fast the first stars formed.",w:"Tightens our picture of the universe’s first billion years.",src:"Sample",t:"6h"}];
-const CTX=[
-{c:"Background",cat:"Business",h:"How central banks set interest rates",s:"Banks raise rates to cool prices and cut them to spur growth. It works with a delay, often 6 to 18 months.",tl:[["1970s","High inflation forces aggressive rate hikes"],["2008","Rates cut near zero after the financial crisis"],["2022","Fastest hikes in decades"]],w:"Understanding the cycle makes rate headlines easier to judge."}];
-let NEWS=SAMPLE,CTXL=CTX,cat="Top",idx=0,onlySaved=false,saved=new Set();
-try{saved=new Set(JSON.parse(localStorage.getItem("brief-saved")||"[]"))}catch(e){}
+const CTX=[{c:"Background",cat:"Business",h:"How central banks set interest rates",s:"Banks raise rates to cool prices and cut them to spur growth. It works with a delay, often 6 to 18 months.",tl:[["1970s","High inflation forces aggressive rate hikes"],["2008","Rates cut near zero after the financial crisis"],["2022","Fastest hikes in decades"]],w:"Understanding the cycle makes rate headlines easier to judge."}];
 const $=id=>document.getElementById(id);
+const LS={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const E=t=>String(t==null?"":t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const dec=s=>{const t=document.createElement("textarea");t.innerHTML=s;return t.value};
+const td=()=>new Date().toLocaleDateString("en-CA"),yest=()=>new Date(Date.now()-864e5).toLocaleDateString("en-CA");
+let NEWS=SAMPLE,CTXL=CTX,cat="Top",idx=0,onlySaved=false,q="",fs=LS.get("sar-fs",1);
+let saved=new Set(LS.get("sar-saved",[])),read=new Set(LS.get("sar-read",[])),follow=new Set(LS.get("sar-follow",[])),streak=LS.get("sar-streak",{last:"",n:0});
+const SIZES=[14,16,18.5];
+function applyFs(){document.documentElement.style.setProperty("--fs",SIZES[fs]+"px")}
+applyFs();{const t=LS.get("sar-theme","");if(t)document.documentElement.dataset.theme=t}
 $("date").textContent=new Date().toLocaleDateString(undefined,{weekday:"long",day:"numeric",month:"long"});
+const match=s=>{s=E(s).toLowerCase();return NEWS.filter(n=>(n.h+" "+n.s+" "+n.c).toLowerCase().includes(s))};
 function list(){
- const base=NEWS.filter(n=>onlySaved?saved.has(n.h):cat==="Top"?n.top:n.c===cat);
- if(onlySaved)return base;
+ if(onlySaved)return NEWS.filter(n=>saved.has(n.h));
+ if(cat==="Search")return match(q);
+ if(cat==="Learn")return CTXL.map(c=>({...c,type:"ctx"}));
+ if(cat==="You"){const o=[];follow.forEach(c=>o.push(...NEWS.filter(n=>n.c===c).slice(0,3)));return o}
+ const base=NEWS.filter(n=>cat==="Top"?n.top:n.c===cat);
  const cx=CTXL.filter(c=>cat==="Top"||c.cat===cat).map(c=>({...c,type:"ctx"}));
  if(cat!=="Top")return base.concat(cx);
  const o=[];let ci=0;base.forEach((n,i)=>{o.push(n);if((i+1)%4===0&&ci<cx.length)o.push(cx[ci++])});return o}
+function greet(){
+ const h=new Date().getHours(),hi=h<12?"शुभ प्रभात":h<17?"शुभ दोपहर":"शुभ संध्या";
+ const left=NEWS.filter(n=>n.top&&!read.has(n.h)).length,alive=(streak.last===td()||streak.last===yest())?streak.n:0;
+ $("greet").innerHTML=hi+" · "+(left?left+" left in today’s brief · ~"+Math.max(1,Math.round(left*.5))+" min":"you’re all caught up ✓")+(alive?'<span class="pill">🔥 '+alive+'-day streak</span>':"")}
+function bump(){if(streak.last===td())return;streak={n:streak.last===yest()?streak.n+1:1,last:td()};LS.set("sar-streak",streak)}
+function markRead(h){if(read.has(h))return;read.add(h);LS.set("sar-read",[...read].slice(-2000))}
+const label=c=>({Top:"★ Top brief",You:"♥ For you",Learn:"💡 Learn"}[c]||c);
 function chips(){
- const cs=["Top",...new Set(NEWS.map(n=>n.c))];$("chips").innerHTML="";
- cs.forEach(c=>{const b=document.createElement("button");b.className="btn"+(c===cat?" on":"");b.textContent=c==="Top"?"★ Top brief":c;
-  b.onclick=()=>{cat=c;onlySaved=false;idx=0;render();chips()};$("chips").appendChild(b)});
+ const cs=["Top",...(follow.size?["You"]:[]),"Learn",...new Set(NEWS.map(n=>n.c))];$("chips").innerHTML="";
+ cs.forEach(c=>{const b=document.createElement("button");b.className="btn"+(c===cat&&!onlySaved?" on":"");b.textContent=label(c);b.onclick=()=>enter(c);$("chips").appendChild(b)});
  const on=$("chips").querySelector(".on");if(on)on.scrollIntoView({inline:"center",block:"nearest"})}
+function enter(c){cat=c;onlySaved=false;const L=list(),u=L.findIndex(x=>!read.has(x.h));idx=c==="Search"?0:(u<0?L.length:u);render();chips()}
 function render(){
- const L=list(),n=L.length;$("saved").textContent="Saved ("+saved.size+")";$("saved").classList.toggle("on",onlySaved);
- if(idx>=n){$("stage").innerHTML='<div class="card done"><div class="tag">'+(n?"All caught up":"Nothing here")+'</div><h2>'+(n?"You’re up to date ✓":"No cards yet")+'</h2><p>'+(n?n+" cards read. ":"")+'The next briefing arrives tomorrow morning.</p><p><button class="btn" id="explore">Browse categories ⊞</button></p></div>';
-  $("explore").onclick=openSheet;$("bar").style.width="100%";$("count").textContent=n+" / "+n;$("left").textContent="Done";return}
- const x=L[idx],ty=x.type||"news";$("bar").style.width=(idx/Math.max(n,1)*100)+"%";$("count").textContent=(idx+1)+" / "+n;$("left").textContent="~"+Math.max(1,Math.ceil((n-idx)*0.5))+" min left";
+ if("speechSynthesis" in window)speechSynthesis.cancel();
+ const L=list(),n=L.length;$("saved").textContent="🔖 Saved ("+saved.size+")";$("saved").classList.toggle("on",onlySaved);
+ if(idx>=n){
+  if(cat==="Top"&&!onlySaved&&n)bump();greet();
+  const alive=(streak.last===td()||streak.last===yest())?streak.n:0;
+  $("stage").innerHTML='<div class="card done"><div class="tag">'+(n?"All caught up":"Nothing here")+'</div><h2>'+(n?"You’re up to date ✓":"No cards yet")+'</h2><p>'+(n?n+" cards in "+(onlySaved?"Saved":label(cat))+". ":"")+(cat==="Top"&&alive?"🔥 "+alive+"-day streak. ":"")+'Next briefing arrives tomorrow morning.</p><p><button class="btn on" id="explore">☰ Browse categories</button> <button class="btn" id="again">↺ Review again</button></p></div>';
+  $("explore").onclick=openCats;$("again").onclick=()=>{idx=0;render()};
+  $("bar").style.width="100%";$("count").textContent=n+" / "+n;$("left").textContent="Done";$("next").textContent="Next →";return}
+ const x=L[idx],ty=x.type||"news";markRead(x.h);greet();
+ $("bar").style.width=(idx/Math.max(n,1)*100)+"%";$("count").textContent=(idx+1)+" / "+n;$("left").textContent="~"+Math.max(1,Math.ceil((n-idx)*0.5))+" min left";
  const tl=x.tl?'<ul class="tl">'+x.tl.map(r=>"<li><b>"+r[0]+"</b> — "+r[1]+"</li>").join("")+"</ul>":"";
- const link=x.url?'<a href="'+x.url+'" target="_blank" rel="noopener" style="color:var(--acc);font-size:12px;margin-right:8px">Read original ↗</a>':"";
- $("stage").innerHTML='<div class="card '+ty+'"><div class="tag">'+x.c+(ty==="news"&&cat==="Top"?" · Top":"")+'</div><h2>'+x.h+'</h2><p>'+x.s+'</p>'+tl+'<div class="why"><b>Why it matters:</b> '+x.w+'</div><div class="foot"><span>'+(x.src?x.src+" · "+x.t+(/^\d/.test(x.t)?" ago":""):"Context card")+'</span><span>'+link+'<button class="btn" id="save">'+(saved.has(x.h)?"★ Saved":"☆ Save")+'</button></span></div></div>';
- $("save").onclick=()=>{saved.has(x.h)?saved.delete(x.h):saved.add(x.h);try{localStorage.setItem("brief-saved",JSON.stringify([...saved]))}catch(e){}render()};
+ const sm=/^(.*?)(?: \+(\d+))?$/.exec(x.src||"");
+ const meta=x.src?sm[1]+" · "+x.t+(/^\d/.test(x.t)?" ago":"")+(sm[2]?' <span class="badge">✔ '+(+sm[2]+1)+' outlets</span>':""):"Context card";
+ $("stage").innerHTML='<div class="card '+ty+'"><div class="tag">'+x.c+(ty==="news"&&cat==="Top"?" · Top":"")+'</div><h2>'+x.h+'</h2><p>'+x.s+'</p>'+tl+'<div class="why"><b>Why it matters:</b> '+x.w+'</div><div class="acts"><button class="btn sm" id="listen">🔊 Listen</button><button class="btn sm" id="share">↗ Share</button><button class="btn sm" id="save">'+(saved.has(x.h)?"★ Saved":"☆ Save")+'</button></div><div class="foot"><span>'+meta+'</span>'+(x.url?'<a href="'+x.url+'" target="_blank" rel="noopener">Read original ↗</a>':"")+'</div></div>';
+ $("save").onclick=()=>{saved.has(x.h)?saved.delete(x.h):saved.add(x.h);LS.set("sar-saved",[...saved]);render()};
+ $("listen").onclick=()=>{if(!("speechSynthesis" in window))return;if(speechSynthesis.speaking){speechSynthesis.cancel();return}const u=new SpeechSynthesisUtterance(dec(x.h)+". "+dec(x.s)+" Why it matters: "+dec(x.w));u.lang="en-IN";speechSynthesis.speak(u)};
+ $("share").onclick=async()=>{const t=dec(x.h)+" — "+dec(x.s),u=x.url?dec(x.url):location.href;try{if(navigator.share)await navigator.share({title:dec(x.h),text:t,url:u});else{await navigator.clipboard.writeText(t+" "+u);$("share").textContent="Copied ✓"}}catch(e){}};
  $("next").textContent=idx===n-1?"Finish ✓":"Next →"}
 function go(d){idx=Math.min(Math.max(0,idx+d),list().length);render()}
+function openSheet(t){$("shtitle").textContent=t;$("sheet").hidden=false}
+function closeSheet(){$("sheet").hidden=true;chips();greet()}
+function openCats(){
+ openSheet("Categories");$("shbody").innerHTML='<p class="hint">Tap ☆ on a topic to follow it — followed topics build your “For you” brief.</p><div class="grid" id="grid"></div>';
+ const g=$("grid");
+ const tile=(c,arr,fol)=>{const d=document.createElement("div");d.className="tile"+(c===cat&&!onlySaved?" on":"");d.tabIndex=0;
+  const u=arr.filter(n=>!read.has(n.h)).length;
+  d.innerHTML="<b>"+label(c)+"</b><small>"+arr.length+" cards"+(u?" · <em>"+u+" new</em>":" · ✓")+"</small>"+(fol?'<span class="fol">'+(follow.has(c)?"★":"☆")+"</span>":"");
+  d.onclick=()=>{$("sheet").hidden=true;enter(c)};
+  if(fol)d.querySelector(".fol").onclick=e=>{e.stopPropagation();follow.has(c)?follow.delete(c):follow.add(c);LS.set("sar-follow",[...follow]);e.target.textContent=follow.has(c)?"★":"☆"};
+  g.appendChild(d)};
+ tile("Top",NEWS.filter(n=>n.top));tile("Learn",CTXL);
+ [...new Set(NEWS.map(n=>n.c))].forEach(c=>tile(c,NEWS.filter(n=>n.c===c),true))}
+function openSearch(){
+ openSheet("Search");$("shbody").innerHTML='<input id="qi" class="qi" placeholder="Search all stories…" autocomplete="off"><div id="qr"></div>';
+ const qi=$("qi"),upd=()=>{const s=qi.value.trim(),m=s.length>1?match(s):[];$("qr").innerHTML="";
+  if(s.length>1&&!m.length)$("qr").innerHTML='<p class="hint">No matches.</p>';
+  m.slice(0,10).forEach(n=>{const b=document.createElement("button");b.className="res";b.innerHTML="<small>"+n.c+"</small>"+n.h;
+   b.onclick=()=>{q=s;cat="Search";onlySaved=false;idx=match(s).findIndex(z=>z.h===n.h);$("sheet").hidden=true;render();chips()};$("qr").appendChild(b)});
+  if(m.length>10){const b=document.createElement("button");b.className="btn on";b.textContent="Show all "+m.length+" results";b.onclick=()=>{q=s;$("sheet").hidden=true;enter("Search")};$("qr").appendChild(b)}};
+ qi.oninput=upd;qi.focus()}
 $("next").onclick=()=>go(1);$("prev").onclick=()=>go(-1);
-$("saved").onclick=()=>{onlySaved=!onlySaved;idx=0;render()};
-function openSheet(){
- const g=$("grid");g.innerHTML="";
- const cs=[["Top","★ Top brief",NEWS.filter(n=>n.top).length],...[...new Set(NEWS.map(n=>n.c))].map(c=>[c,c,NEWS.filter(n=>n.c===c).length])];
- cs.forEach(([c,l,k])=>{const b=document.createElement("button");b.className="tile"+(c===cat&&!onlySaved?" on":"");b.innerHTML=l+"<small>"+k+" cards</small>";
-  b.onclick=()=>{cat=c;onlySaved=false;idx=0;closeSheet();render();chips()};g.appendChild(b)});
- $("sheet").hidden=false}
-function closeSheet(){$("sheet").hidden=true}
-$("mapbtn").onclick=openSheet;$("sx").onclick=closeSheet;
+$("saved").onclick=()=>{onlySaved=!onlySaved;idx=0;render();chips()};
+$("mapbtn").onclick=openCats;$("srch").onclick=openSearch;$("sx").onclick=closeSheet;
 $("sheet").addEventListener("click",e=>{if(e.target.id==="sheet")closeSheet()});
-$("theme").onclick=()=>{const r=document.documentElement;const dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=dark?"light":"dark"};
-document.addEventListener("keydown",e=>{if(e.key==="Escape")closeSheet();if($("sheet").hidden){if(e.key==="ArrowRight")go(1);if(e.key==="ArrowLeft")go(-1)}});
+$("fsb").onclick=()=>{fs=(fs+1)%3;LS.set("sar-fs",fs);applyFs()};
+$("theme").onclick=()=>{const r=document.documentElement,dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=dark?"light":"dark";LS.set("sar-theme",r.dataset.theme)};
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeSheet();if($("sheet").hidden&&document.activeElement.tagName!=="INPUT"){if(e.key==="ArrowRight")go(1);if(e.key==="ArrowLeft")go(-1)}});
 let sx=null;$("stage").addEventListener("touchstart",e=>sx=e.touches[0].clientX,{passive:true});
 $("stage").addEventListener("touchend",e=>{if(sx===null)return;const d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>50)go(d<0?1:-1);sx=null});
-chips();render();
-const E=t=>String(t==null?"":t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 function ago(p){const m=(Date.now()-new Date(p))/6e4;if(!(m>=0))return"recently";return m<60?Math.round(m)+"m":m<1440?Math.round(m/60)+"h":Math.round(m/1440)+"d"}
+chips();render();
 fetch("news.json?"+Date.now()).then(r=>r.ok?r.json():Promise.reject()).then(d=>{
  if(!d.items||!d.items.length)return;
  NEWS=d.items.map(i=>({c:E(i.category),top:!!i.top,h:E(i.headline),s:E(i.summary),w:E(i.why_it_matters||"Worth knowing for today’s picture."),src:E(i.source),t:ago(i.published),url:/^https?:/.test(i.url||"")?E(i.url):""}));
  if(d.context&&d.context.length)CTXL=d.context.map(c=>({c:E(c.c),cat:E(c.cat||""),h:E(c.h),s:E(c.s),w:E(c.w),tl:(c.tl||[]).map(r=>[E(r[0]),E(r[1])])}));
  if(!NEWS.some(n=>n.top))NEWS.slice(0,12).forEach(n=>n.top=true);
- cat="Top";idx=0;chips();render();
+ enter("Top");
  $("note").textContent="Live · "+NEWS.length+" stories · "+(new Set(NEWS.map(n=>n.c)).size)+" categories · updated "+new Date(d.updated).toLocaleString()}).catch(()=>{});
+if("serviceWorker" in navigator&&location.protocol.startsWith("http"))navigator.serviceWorker.register("sw.js").catch(()=>{});
 </script>
 </body>
 </html>
