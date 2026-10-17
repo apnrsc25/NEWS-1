@@ -13,6 +13,9 @@ html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh}
 .app{max-width:520px;margin:0 auto;padding:16px}
 header{display:flex;justify-content:space-between;align-items:center}
+header>div:last-child{display:flex;gap:6px;flex-shrink:0}
+header .btn{padding:6px 10px}
+.date{max-width:110px}
 h1{font:700 22px Georgia,serif;margin:0}
 .date{color:var(--mute);font-size:13px}
 .btn{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 12px;font-size:13px;cursor:pointer}
@@ -22,7 +25,14 @@ h1{font:700 22px Georgia,serif;margin:0}
 .meta{display:flex;justify-content:space-between;color:var(--mute);font-size:12px}
 .chiprow{display:flex;gap:8px;align-items:flex-start;margin:12px 0}
 .chips{flex:1;display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;min-width:0}
-.chips.wrap{flex-wrap:wrap;overflow:visible}
+#sheet{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:20;display:flex;align-items:flex-end;justify-content:center}
+#sheet[hidden]{display:none}
+.sheet{background:var(--bg);width:100%;max-width:520px;max-height:85vh;overflow:auto;border-radius:18px 18px 0 0;padding:16px;padding-bottom:calc(16px + env(safe-area-inset-bottom,0px))}
+.sh{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.tile{border:1px solid var(--line);background:var(--card);border-radius:12px;padding:12px;text-align:left;color:var(--ink);cursor:pointer;font-size:14px;font-family:inherit}
+.tile small{display:block;color:var(--mute);font-size:12px}
+.tile.on{border-color:var(--acc);box-shadow:inset 0 0 0 1px var(--acc)}
 .chips .btn,.chiprow>.btn{white-space:nowrap}
 .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;min-height:360px;display:flex;flex-direction:column;touch-action:pan-y}
 .card.ctx{background:var(--ctx)}
@@ -46,12 +56,13 @@ h1{font:700 22px Georgia,serif;margin:0}
 </head>
 <body>
 <div class="app">
-<header><div><h1>Brief</h1><div class="date" id="date"></div></div><div><button class="btn" id="saved">Saved (0)</button> <button class="btn" id="theme">◐</button></div></header>
+<header><div><h1>Brief</h1><div class="date" id="date"></div></div><div><button class="btn" id="mapbtn">☰ Categories</button> <button class="btn" id="saved">Saved (0)</button> <button class="btn" id="theme">◐</button></div></header>
 <div class="prog"><i id="bar"></i></div>
 <div class="meta"><span id="count"></span><span id="left"></span></div>
-<div class="chiprow"><div class="chips" id="chips"></div><button class="btn" id="mapbtn" title="All categories">⊞</button></div>
+<div class="chiprow"><div class="chips" id="chips"></div></div>
 <div id="stage"></div>
 <div class="nav"><button class="btn" id="prev">← Back</button><button class="btn main" id="next">Next →</button></div>
+<div id="sheet" hidden><div class="sheet"><div class="sh"><b>All categories</b><button class="btn" id="sx">✕ Close</button></div><div class="grid" id="grid"></div></div></div>
 <div class="note" id="note">Swipe or use ← → keys. Showing sample stories (news.json not found).</div>
 </div>
 <script>
@@ -75,12 +86,12 @@ function list(){
 function chips(){
  const cs=["Top",...new Set(NEWS.map(n=>n.c))];$("chips").innerHTML="";
  cs.forEach(c=>{const b=document.createElement("button");b.className="btn"+(c===cat?" on":"");b.textContent=c==="Top"?"★ Top brief":c;
-  b.onclick=()=>{cat=c;onlySaved=false;idx=0;$("chips").classList.remove("wrap");render();chips()};$("chips").appendChild(b)});
+  b.onclick=()=>{cat=c;onlySaved=false;idx=0;render();chips()};$("chips").appendChild(b)});
  const on=$("chips").querySelector(".on");if(on)on.scrollIntoView({inline:"center",block:"nearest"})}
 function render(){
  const L=list(),n=L.length;$("saved").textContent="Saved ("+saved.size+")";$("saved").classList.toggle("on",onlySaved);
  if(idx>=n){$("stage").innerHTML='<div class="card done"><div class="tag">'+(n?"All caught up":"Nothing here")+'</div><h2>'+(n?"You’re up to date ✓":"No cards yet")+'</h2><p>'+(n?n+" cards read. ":"")+'The next briefing arrives tomorrow morning.</p><p><button class="btn" id="explore">Browse categories ⊞</button></p></div>';
-  $("explore").onclick=()=>{$("chips").classList.add("wrap");scrollTo(0,0)};$("bar").style.width="100%";$("count").textContent=n+" / "+n;$("left").textContent="Done";return}
+  $("explore").onclick=openSheet;$("bar").style.width="100%";$("count").textContent=n+" / "+n;$("left").textContent="Done";return}
  const x=L[idx],ty=x.type||"news";$("bar").style.width=(idx/Math.max(n,1)*100)+"%";$("count").textContent=(idx+1)+" / "+n;$("left").textContent="~"+Math.max(1,Math.ceil((n-idx)*0.5))+" min left";
  const tl=x.tl?'<ul class="tl">'+x.tl.map(r=>"<li><b>"+r[0]+"</b> — "+r[1]+"</li>").join("")+"</ul>":"";
  const link=x.url?'<a href="'+x.url+'" target="_blank" rel="noopener" style="color:var(--acc);font-size:12px;margin-right:8px">Read original ↗</a>':"";
@@ -90,9 +101,17 @@ function render(){
 function go(d){idx=Math.min(Math.max(0,idx+d),list().length);render()}
 $("next").onclick=()=>go(1);$("prev").onclick=()=>go(-1);
 $("saved").onclick=()=>{onlySaved=!onlySaved;idx=0;render()};
-$("mapbtn").onclick=()=>$("chips").classList.toggle("wrap");
+function openSheet(){
+ const g=$("grid");g.innerHTML="";
+ const cs=[["Top","★ Top brief",NEWS.filter(n=>n.top).length],...[...new Set(NEWS.map(n=>n.c))].map(c=>[c,c,NEWS.filter(n=>n.c===c).length])];
+ cs.forEach(([c,l,k])=>{const b=document.createElement("button");b.className="tile"+(c===cat&&!onlySaved?" on":"");b.innerHTML=l+"<small>"+k+" cards</small>";
+  b.onclick=()=>{cat=c;onlySaved=false;idx=0;closeSheet();render();chips()};g.appendChild(b)});
+ $("sheet").hidden=false}
+function closeSheet(){$("sheet").hidden=true}
+$("mapbtn").onclick=openSheet;$("sx").onclick=closeSheet;
+$("sheet").addEventListener("click",e=>{if(e.target.id==="sheet")closeSheet()});
 $("theme").onclick=()=>{const r=document.documentElement;const dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=dark?"light":"dark"};
-document.addEventListener("keydown",e=>{if(e.key==="ArrowRight")go(1);if(e.key==="ArrowLeft")go(-1)});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeSheet();if($("sheet").hidden){if(e.key==="ArrowRight")go(1);if(e.key==="ArrowLeft")go(-1)}});
 let sx=null;$("stage").addEventListener("touchstart",e=>sx=e.touches[0].clientX,{passive:true});
 $("stage").addEventListener("touchend",e=>{if(sx===null)return;const d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>50)go(d<0?1:-1);sx=null});
 chips();render();
