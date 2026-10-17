@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brief — 5-minute news</title>
+<style>
+:root{--bg:#f6f4ef;--card:#fff;--ink:#1b1b1f;--mute:#6b6b75;--line:#e4e1d8;--acc:#c2410c;--ctx:#eef2ff;--ctxink:#3730a3;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121214;--card:#1c1c20;--ink:#f1f0ec;--mute:#9a9aa5;--line:#2c2c33;--acc:#fb923c;--ctx:#1e1b3a;--ctxink:#a5b4fc;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121214;--card:#1c1c20;--ink:#f1f0ec;--mute:#9a9aa5;--line:#2c2c33;--acc:#fb923c;--ctx:#1e1b3a;--ctxink:#a5b4fc;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh}
+.app{max-width:520px;margin:0 auto;padding:16px}
+header{display:flex;justify-content:space-between;align-items:center}
+h1{font:700 22px Georgia,serif;margin:0}
+.date{color:var(--mute);font-size:13px}
+.btn{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 12px;font-size:13px;cursor:pointer}
+.btn.on{background:var(--ink);color:var(--bg)}
+.prog{margin:14px 0 6px;height:5px;background:var(--line);border-radius:9px;overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:var(--acc);transition:width .3s}
+.meta{display:flex;justify-content:space-between;color:var(--mute);font-size:12px}
+.chips{display:flex;gap:8px;overflow-x:auto;margin:12px 0;padding-bottom:4px}
+.chips .btn{white-space:nowrap}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;min-height:360px;display:flex;flex-direction:column;touch-action:pan-y}
+.card.ctx{background:var(--ctx)}
+.tag{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--acc)}
+.ctx .tag{color:var(--ctxink)}
+.card h2{font:700 24px/1.25 Georgia,serif;margin:10px 0 12px}
+.card p{margin:0 0 12px}
+.why{border-left:3px solid var(--acc);padding-left:10px;color:var(--mute);font-size:14px}
+.ctx .why{border-color:var(--ctxink)}
+.tl{margin:6px 0;padding:0;list-style:none;font-size:14px}
+.tl li{padding:4px 0 4px 14px;border-left:2px solid var(--ctxink)}
+.tl b{color:var(--ctxink)}
+.foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;color:var(--mute);font-size:12px;padding-top:12px}
+.nav{display:flex;gap:10px;margin-top:14px}
+.nav .btn{flex:1;padding:12px;font-size:15px}
+.nav .main{background:var(--acc);border-color:var(--acc);color:#fff}
+.note{color:var(--mute);font-size:12px;text-align:center;margin-top:14px}
+.done{text-align:center;justify-content:center}
+.done h2{font-size:28px}
+</style>
+</head>
+<body>
+<div class="app">
+<header><div><h1>Brief</h1><div class="date" id="date"></div></div><div><button class="btn" id="saved">Saved (0)</button> <button class="btn" id="theme">◐</button></div></header>
+<div class="prog"><i id="bar"></i></div>
+<div class="meta"><span id="count"></span><span id="left"></span></div>
+<div class="chips" id="chips"></div>
+<div id="stage"></div>
+<div class="nav"><button class="btn" id="prev">← Back</button><button class="btn main" id="next">Next →</button></div>
+<div class="note" id="note">Swipe or use ← → keys. Showing sample stories (news.json not found).</div>
+</div>
+<script>
+const SAMPLE=[
+{c:"World",h:"Regional leaders agree on a shared climate-finance framework",s:"Delegates from several nations signed a framework to pool funds for flood and heat resilience. Details on contributions are still to be finalised over the coming months.",w:"It decides who pays for climate damage — and how fast money reaches affected regions.",src:"Sample wire",t:"2h"},
+{c:"Business",h:"Central bank holds rates steady, signals cautious outlook",s:"The policy rate was left unchanged as inflation eased but stayed above target. The bank said future moves depend on incoming price and growth data.",w:"Loan EMIs and savings returns stay roughly where they are for now.",src:"Sample wire",t:"3h"},
+{c:"Tech",h:"New open-source AI model released for on-device use",s:"Developers published a compact language model that runs on mid-range phones without a network connection. Early tests show strong speed but limited reasoning depth.",w:"Private, offline AI could reach far more people than cloud-only tools.",src:"Sample wire",t:"5h"},
+{c:"Science",h:"Telescope team reports a new batch of distant galaxies",s:"Astronomers catalogued dozens of faint galaxies from the early universe. The data helps test how quickly the first stars and galaxies formed.",w:"Tightens our picture of the universe’s first billion years.",src:"Sample wire",t:"6h"},
+{c:"Health",h:"Health body issues updated seasonal flu guidance",s:"Officials urged high-risk groups to vaccinate before winter and advised staying home when symptomatic. Hospitals were asked to review bed capacity.",w:"Practical steps for families, especially elders and young children.",src:"Sample wire",t:"8h"},
+{c:"Sports",h:"Home side wins a tense final over in the last minutes",s:"A late goal sealed a 2–1 victory, ending a long title drought. The coach credited a disciplined defensive display.",w:"A major trophy and a likely boost for the league’s season.",src:"Sample wire",t:"9h"},
+{c:"India",h:"State announces new public transport expansion plan",s:"The plan adds metro and electric-bus corridors over the next few years, with phased funding. Officials expect reduced commute times in dense zones.",w:"Affects daily travel, air quality and property trends in cities.",src:"Sample wire",t:"10h"}];
+const CTX=[
+{c:"Background",h:"How central banks set interest rates",s:"Banks raise rates to cool prices and cut them to spur growth. It works with a delay — often 6 to 18 months.",tl:[["1970s","High inflation forces aggressive rate hikes"],["2008","Rates cut near zero after the financial crisis"],["2022","Fastest hikes in decades to fight inflation"]],w:"Understanding the cycle makes headlines like today’s easier to judge."},
+{c:"Did you know",h:"Why climate summits keep returning to money",s:"Poorer nations bear much of the damage but emitted far less. Finance — who pays, how much — is the recurring sticking point.",tl:[["1992","First global climate treaty is adopted"],["2009","$100bn a year promised, reached years late"],["Today","Talks shift to damage and resilience funds"]],w:"Context for why ‘framework’ deals matter even before the numbers."}];
+let NEWS=SAMPLE,CTXL=CTX;const items=[];function build(){items.length=0;let ci=0;NEWS.forEach((n,i)=>{items.push({...n,type:"news"});if((i+1)%3===0&&ci<CTXL.length)items.push({...CTXL[ci++],type:"ctx"})})}build();
+let cat="All",idx=0,onlySaved=false,saved=new Set();
+try{saved=new Set(JSON.parse(localStorage.getItem("brief-saved")||"[]"))}catch(e){}
+const $=id=>document.getElementById(id);
+$("date").textContent=new Date().toLocaleDateString(undefined,{weekday:"long",day:"numeric",month:"long"});
+function list(){return items.filter(x=>(onlySaved?saved.has(x.h):true)&&(cat==="All"||x.type==="ctx"||x.c===cat))}
+function chips(){const cs=["All",...new Set(NEWS.map(n=>n.c))];$("chips").innerHTML="";cs.forEach(c=>{const b=document.createElement("button");b.className="btn"+(c===cat?" on":"");b.textContent=c;b.onclick=()=>{cat=c;idx=0;render();chips()};$("chips").appendChild(b)})}
+function render(){const L=list(),n=L.length;$("saved").textContent="Saved ("+saved.size+")";$("saved").classList.toggle("on",onlySaved);
+if(idx>=n){$("stage").innerHTML='<div class="card done"><div class="tag">All caught up</div><h2>You’re up to date ✓</h2><p>'+(n?n+" cards read":"Nothing here yet")+'. Come back tomorrow for the next briefing.</p></div>';$("bar").style.width="100%";$("count").textContent=n+" / "+n;$("left").textContent="Done";return}
+const x=L[idx];$("bar").style.width=(idx/Math.max(n,1)*100)+"%";$("count").textContent=(idx+1)+" / "+n;$("left").textContent="~"+Math.max(1,Math.ceil((n-idx)*0.5))+" min left";
+const tl=x.tl?'<ul class="tl">'+x.tl.map(r=>"<li><b>"+r[0]+"</b> — "+r[1]+"</li>").join("")+"</ul>":"";
+$("stage").innerHTML='<div class="card '+x.type+'"><div class="tag">'+x.c+'</div><h2>'+x.h+'</h2><p>'+x.s+'</p>'+tl+'<div class="why"><b>Why it matters:</b> '+x.w+'</div><div class="foot"><span>'+(x.src?x.src+" · "+x.t+(/^\d/.test(x.t)?" ago":""):"Context card")+'</span><span>'+(x.url?'<a href="'+x.url+'" target="_blank" rel="noopener" style="color:var(--acc);font-size:12px;margin-right:8px">Read original ↗</a>':'')+'<button class="btn" id="save">'+(saved.has(x.h)?"★ Saved":"☆ Save")+'</button></span></div></div>';
+$("save").onclick=()=>{saved.has(x.h)?saved.delete(x.h):saved.add(x.h);try{localStorage.setItem("brief-saved",JSON.stringify([...saved]))}catch(e){}render()};
+$("next").textContent=idx===n-1?"Finish ✓":"Next →"}
+function go(d){idx=Math.max(0,idx+d);render()}
+$("next").onclick=()=>go(1);$("prev").onclick=()=>go(-1);
+$("saved").onclick=()=>{onlySaved=!onlySaved;idx=0;render()};
+$("theme").onclick=()=>{const r=document.documentElement;const dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=dark?"light":"dark"};
+document.addEventListener("keydown",e=>{if(e.key==="ArrowRight")go(1);if(e.key==="ArrowLeft")go(-1)});
+let sx=null;$("stage").addEventListener("touchstart",e=>sx=e.touches[0].clientX,{passive:true});
+$("stage").addEventListener("touchend",e=>{if(sx===null)return;const d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>50)go(d<0?1:-1);sx=null});
+chips();render();
+const E=t=>String(t==null?"":t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function ago(p){const m=(Date.now()-new Date(p))/6e4;if(!(m>=0))return"recently";return m<60?Math.round(m)+"m":m<1440?Math.round(m/60)+"h":Math.round(m/1440)+"d"}
+fetch("news.json?"+Date.now()).then(r=>r.ok?r.json():Promise.reject()).then(d=>{
+if(!d.items||!d.items.length)return;
+NEWS=d.items.map(i=>({c:E(i.category),h:E(i.headline),s:E(i.summary),w:E(i.why_it_matters||"Worth knowing for today’s picture."),src:E(i.source),t:ago(i.published),url:/^https?:/.test(i.url||"")?E(i.url):""}));
+if(d.context&&d.context.length)CTXL=d.context.map(c=>({c:E(c.c),h:E(c.h),s:E(c.s),w:E(c.w),tl:(c.tl||[]).map(r=>[E(r[0]),E(r[1])])}));
+build();cat="All";idx=0;chips();render();
+$("note").textContent="Live · updated "+new Date(d.updated).toLocaleString()}).catch(()=>{});
+</script>
+</body>
+</html>
