@@ -1,6 +1,6 @@
 name: Update news
 on:
-  schedule: [{cron: "15 * * * *"}]   # hourly
+  schedule: [{cron: "30 0 * * *"}]   # daily, 6:00 AM IST
   workflow_dispatch:
 permissions:
   contents: write
