@@ -1,20 +1,49 @@
-"""RSS -> dedupe -> rank -> (optional) LLM summaries -> docs/news.json"""
-import feedparser, json, os, re, html, time, datetime as dt
+"""25 categories x 5 cards: RSS -> dedupe -> rank -> LLM summaries -> docs/news.json"""
+import feedparser, json, os, re, html, time, socket, datetime as dt
 from calendar import timegm
+from urllib.parse import urlparse
 
-FEEDS = [  # (category, source, url) - verify URLs occasionally; edit freely
- ("World","BBC News","https://feeds.bbci.co.uk/news/world/rss.xml"),
- ("World","Al Jazeera","https://www.aljazeera.com/xml/rss/all.xml"),
- ("World","The Guardian","https://www.theguardian.com/world/rss"),
- ("India","The Hindu","https://www.thehindu.com/news/national/feeder/default.rss"),
- ("India","Indian Express","https://indianexpress.com/section/india/feed/"),
- ("Business","BBC News","https://feeds.bbci.co.uk/news/business/rss.xml"),
- ("Tech","BBC News","https://feeds.bbci.co.uk/news/technology/rss.xml"),
- ("Science","BBC News","https://feeds.bbci.co.uk/news/science_and_environment/rss.xml"),
- ("Health","BBC News","https://feeds.bbci.co.uk/news/health/rss.xml"),
- ("Sports","BBC Sport","https://feeds.bbci.co.uk/sport/rss.xml"),
-]
-TOTAL, PER_CAT, MAX_AGE_H = 12, 3, 36      # cards per briefing, cap per category, freshness window
+socket.setdefaulttimeout(15)
+feedparser.USER_AGENT = "Mozilla/5.0 (compatible; BriefNewsBot/1.0)"
+G = lambda p: f"https://www.theguardian.com/{p}/rss"
+H = lambda p: f"https://www.thehindu.com/{p}/feeder/default.rss"
+B = lambda p: f"https://feeds.bbci.co.uk/{p}/rss.xml"
+N = lambda i: f"https://feeds.npr.org/{i}/rss.xml"
+
+# category -> feeds (several per category so 5 cards are reachable; dead feeds are skipped & reported)
+CATS = {
+ "World": [B("news/world"), G("world"), "https://www.aljazeera.com/xml/rss/all.xml"],
+ "India": [H("news/national"), "https://indianexpress.com/section/india/feed/", B("news/world/asia/india")],
+ "Politics": [G("politics"), B("news/politics"), N(1014)],
+ "Governance": ["https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3", "https://indianexpress.com/section/political-pulse/feed/", G("global-development")],
+ "Finance": [H("business/markets"), H("business/Economy"), G("business/economics")],
+ "Business": [B("news/business"), H("business"), G("business")],
+ "Education": [G("education"), H("education"), B("news/education")],
+ "Environment": [G("environment"), "https://news.mongabay.com/feed/", "https://www.downtoearth.org.in/rss/all"],
+ "Climate & Energy": ["https://www.carbonbrief.org/feed", G("environment/climate-crisis"), G("environment/energy")],
+ "Science": [B("news/science_and_environment"), "https://www.sciencedaily.com/rss/top.xml", "https://www.nature.com/nature.rss"],
+ "Space": ["https://www.nasa.gov/feed/", G("science/space"), "https://www.space.com/feeds/all"],
+ "Technology": [B("news/technology"), G("technology"), H("sci-tech")],
+ "AI": [G("technology/artificialintelligence"), "https://www.technologyreview.com/topic/artificial-intelligence/feed"],
+ "Health": [B("news/health"), "https://www.who.int/rss-feeds/news-english.xml", H("sci-tech/health")],
+ "Law & Justice": [G("law"), "https://www.livelaw.in/rss/"],
+ "Society": [G("society"), H("society"), B("news/uk")],
+ "Literature": [G("books"), H("books"), N(1032)],
+ "Arts & Culture": [G("culture"), G("artanddesign"), H("entertainment/art")],
+ "Film & TV": [G("film"), G("tv-and-radio"), H("entertainment/movies")],
+ "Music": [G("music"), H("entertainment/music"), N(1039)],
+ "Sports": [B("sport"), G("sport"), H("sport")],
+ "Food": [G("food"), H("life-and-style/food")],
+ "Travel": [G("travel"), H("life-and-style/travel")],
+ "Lifestyle": [G("lifeandstyle"), H("life-and-style")],
+ "Opinion": [G("commentisfree"), H("opinion"), "https://indianexpress.com/section/opinion/feed/"],
+}
+NAMES = {"bbci.co.uk": "BBC", "theguardian.com": "The Guardian", "thehindu.com": "The Hindu", "aljazeera.com": "Al Jazeera",
+ "indianexpress.com": "Indian Express", "npr.org": "NPR", "pib.gov.in": "PIB", "mongabay.com": "Mongabay",
+ "downtoearth.org.in": "Down To Earth", "carbonbrief.org": "Carbon Brief", "sciencedaily.com": "ScienceDaily",
+ "nature.com": "Nature", "nasa.gov": "NASA", "space.com": "Space.com", "technologyreview.com": "MIT Tech Review",
+ "who.int": "WHO", "livelaw.in": "LiveLaw"}
+PER_CAT, TOP_N, TOP_PER_CAT, MAX_AGE_H, CHUNK = 5, 12, 2, 72, 25
 MODEL = os.getenv("MODEL", "claude-haiku-5-5")
 PROMPT = ("You are a neutral news editor. For each story write: headline (max 90 chars), "
  "summary (2-3 sentences, max 55 words, ONLY facts present in the input - add nothing), "
@@ -23,19 +52,25 @@ PROMPT = ("You are a neutral news editor. For each story write: headline (max 90
 
 clean = lambda t: re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", html.unescape(t or ""))).strip()
 words = lambda t: {w for w in re.findall(r"[a-z0-9]+", t.lower()) if len(w) > 3}
+def source_of(url):
+    h = (urlparse(url).hostname or "").lower()
+    return next((n for d, n in NAMES.items() if h.endswith(d)), h)
 
 def collect():
     out, now = [], time.time()
-    for cat, src, url in FEEDS:
-        try:
-            for e in feedparser.parse(url).entries[:15]:
-                t = e.get("published_parsed") or e.get("updated_parsed")
-                ts = timegm(t) if t else now
-                if now - ts > MAX_AGE_H * 3600: continue
-                out.append(dict(category=cat, source=src, title=clean(e.get("title")),
-                                snippet=clean(e.get("summary"))[:400], url=e.get("link", ""), ts=ts))
-        except Exception as ex:
-            print("feed failed:", src, ex)
+    for cat, urls in CATS.items():
+        for url in urls:
+            got = 0
+            try:
+                for e in feedparser.parse(url).entries[:12]:
+                    t = e.get("published_parsed") or e.get("updated_parsed")
+                    ts = timegm(t) if t else now
+                    if now - ts > MAX_AGE_H * 3600 or not e.get("title"): continue
+                    out.append(dict(category=cat, source=source_of(url), title=clean(e.get("title")),
+                                    snippet=clean(e.get("summary"))[:400], url=e.get("link", ""), ts=ts)); got += 1
+            except Exception as ex:
+                print("  error", url, ex)
+            if not got: print(f"  EMPTY/FAILED: [{cat}] {url}")
     return out
 
 def cluster(items):  # same story from several outlets -> one group
@@ -47,49 +82,59 @@ def cluster(items):  # same story from several outlets -> one group
                 g["srcs"].add(it["source"]); break
         else:
             groups.append(dict(w=w, item=it, srcs={it["source"]}))
-    return groups
-
-def pick(groups):
-    now, chosen, count = time.time(), [], {}
+    now = time.time()
     for g in groups:
         g["score"] = len(g["srcs"]) * 2 + max(0, 1 - (now - g["item"]["ts"]) / (MAX_AGE_H * 3600))
+    return groups
+
+def select(groups):
+    """PER_CAT best per category; TOP_N best overall (max TOP_PER_CAT per category) are flagged top."""
+    order = list(CATS)
+    by = {c: [] for c in order}
     for g in sorted(groups, key=lambda g: -g["score"]):
         c = g["item"]["category"]
-        if count.get(c, 0) >= PER_CAT: continue
-        count[c] = count.get(c, 0) + 1; chosen.append(g)
-        if len(chosen) == TOTAL: break
-    return chosen
-
-def summarise(chosen):
-    base = []
-    for i, g in enumerate(chosen):
+        if len(by[c]) < PER_CAT: by[c].append(g)
+    chosen = [g for c in order for g in by[c]]
+    top, cnt = [], {}
+    for g in sorted(chosen, key=lambda g: -g["score"]):
+        c = g["item"]["category"]
+        if cnt.get(c, 0) < TOP_PER_CAT and len(top) < TOP_N:
+            cnt[c] = cnt.get(c, 0) + 1; top.append(g)
+    ids = {id(g) for g in top}
+    ordered = top + [g for g in chosen if id(g) not in ids]   # top first, then by category
+    cards = []
+    for g in ordered:
         it = g["item"]
-        base.append(dict(id=i, category=it["category"], headline=it["title"], summary=it["snippet"][:220],
-                         why_it_matters="", source=it["source"] + (f" +{len(g['srcs'])-1}" if len(g["srcs"]) > 1 else ""),
-                         url=it["url"], published=dt.datetime.fromtimestamp(it["ts"], dt.timezone.utc).isoformat()))
+        cards.append(dict(category=it["category"], headline=it["title"], summary=it["snippet"][:220], why_it_matters="",
+            source=it["source"] + (f" +{len(g['srcs'])-1}" if len(g["srcs"]) > 1 else ""), url=it["url"], top=id(g) in ids,
+            published=dt.datetime.fromtimestamp(it["ts"], dt.timezone.utc).isoformat()))
+    return cards
+
+def summarise(cards):
     if not os.getenv("ANTHROPIC_API_KEY"):
-        print("No ANTHROPIC_API_KEY - using raw snippets"); return base
-    try:
-        import anthropic
-        src = [dict(id=b["id"], title=b["headline"], snippet=b["summary"]) for b in base]
-        msg = anthropic.Anthropic().messages.create(model=MODEL, max_tokens=3000,
-              messages=[{"role": "user", "content": PROMPT + json.dumps(src)}])
-        for d in json.loads(re.search(r"\[.*\]", msg.content[0].text, re.S).group(0)):
-            if isinstance(d.get("id"), int) and 0 <= d["id"] < len(base):
-                b = base[d["id"]]
-                for k in ("headline", "summary", "why_it_matters"):
-                    if d.get(k): b[k] = d[k]
-    except Exception as ex:
-        print("LLM step failed, using raw snippets:", ex)
-    return base
+        print("No ANTHROPIC_API_KEY - using raw snippets"); return
+    import anthropic
+    client = anthropic.Anthropic()
+    for s in range(0, len(cards), CHUNK):
+        part = cards[s:s + CHUNK]
+        try:
+            src = [dict(id=i, title=c["headline"], snippet=c["summary"]) for i, c in enumerate(part)]
+            msg = client.messages.create(model=MODEL, max_tokens=4500, messages=[{"role": "user", "content": PROMPT + json.dumps(src)}])
+            for d in json.loads(re.search(r"\[.*\]", msg.content[0].text, re.S).group(0)):
+                if isinstance(d.get("id"), int) and 0 <= d["id"] < len(part):
+                    for k in ("headline", "summary", "why_it_matters"):
+                        if d.get(k): part[d["id"]][k] = d[k]
+        except Exception as ex:
+            print(f"LLM chunk {s//CHUNK} failed, raw snippets kept:", ex)
 
 if __name__ == "__main__":
     items = collect()
-    if not items:
-        raise SystemExit("No items fetched - keeping previous news.json")
-    cards = summarise(pick(cluster(items)))
+    if not items: raise SystemExit("No items fetched - keeping previous news.json")
+    cards = select(cluster(items))
+    summarise(cards)
     ctx = json.load(open("context.json")) if os.path.exists("context.json") else []
     os.makedirs("docs", exist_ok=True)
     json.dump(dict(updated=dt.datetime.now(dt.timezone.utc).isoformat(), items=cards, context=ctx),
               open("docs/news.json", "w"), indent=1, ensure_ascii=False)
-    print("Wrote", len(cards), "cards")
+    print("Wrote", len(cards), "cards;", sum(c["top"] for c in cards), "in Top brief")
+    for c in CATS: print(f"  {c}: {sum(x['category']==c for x in cards)}")
