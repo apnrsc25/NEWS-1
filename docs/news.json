@@ -1,125 +1,1175 @@
 {
- "updated": "2026-10-17T21:13:23.349077+00:00",
+ "updated": "2026-10-17T21:34:47.459085+00:00",
  "items": [
   {
-   "id": 0,
-   "category": "Sports",
-   "headline": "Bath lose at home to Montpellier in Champions Cup",
-   "summary": "An excellent second-half display by Montpellier earns an impressive victory at Bath on the opening weekend of the Champions Cup.",
-   "why_it_matters": "",
-   "source": "BBC Sport",
-   "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c370pxwklgwjo?at_medium=RSS&at_campaign=rss",
-   "published": "2026-10-17T21:02:25+00:00"
-  },
-  {
-   "id": 1,
-   "category": "World",
-   "headline": "Anti-government protesters battle with police in Albania",
-   "summary": "There were violent clashes between demonstrators and riot police throughout Saturday in the capital Tirana.",
-   "why_it_matters": "",
-   "source": "BBC News",
-   "url": "https://www.bbc.co.uk/news/articles/crwydey50xeno?at_medium=RSS&at_campaign=rss",
-   "published": "2026-10-17T20:53:00+00:00"
-  },
-  {
-   "id": 2,
-   "category": "World",
-   "headline": "Violent clashes, looting and buildings ablaze as hundreds arrested after France protests",
-   "summary": "Disorder broke out in cities across the country on a day in which more than half a million joined cost of living protests.",
-   "why_it_matters": "",
-   "source": "BBC News",
-   "url": "https://www.bbc.co.uk/news/articles/c6d937wedj7jo?at_medium=RSS&at_campaign=rss",
-   "published": "2026-10-17T20:52:17+00:00"
-  },
-  {
-   "id": 3,
-   "category": "World",
-   "headline": "Ten killed in fire at beach resort in Bangladesh",
-   "summary": "Ten people, including six members of the same family, were killed in a fire at a beach resort in Bangladesh.",
-   "why_it_matters": "",
-   "source": "Al Jazeera",
-   "url": "https://www.aljazeera.com/video/newsfeed/2026/10/17/17-10-sv-coxsbazaar-hotel-blaze-_-bd?traffic_source=rss",
-   "published": "2026-10-17T20:50:01+00:00"
-  },
-  {
-   "id": 4,
-   "category": "Sports",
-   "headline": "Gyokeres pushing for Arsenal exit - Sunday's gossip",
-   "summary": "Viktor Gyokeres wants to leave Arsenal, Xabi Alonso eyes Barcelona duo and Liverpool target Dortmund's Felix Nmecha.",
-   "why_it_matters": "",
-   "source": "BBC Sport",
-   "url": "https://www.bbc.co.uk/sport/football/articles/c9gkv34kezdko?at_medium=RSS&at_campaign=rss",
-   "published": "2026-10-17T20:37:25+00:00"
-  },
-  {
-   "id": 5,
-   "category": "Tech",
+   "category": "Technology",
    "headline": "No further action against government adviser's wife over Palestine Action post, police say",
    "summary": "Sarah Helm, who is married to Jonathan Powell, was responding to a discussion about the author Sally Rooney.",
    "why_it_matters": "",
-   "source": "BBC News",
+   "source": "BBC +1",
    "url": "https://www.bbc.co.uk/news/articles/cv8ez40yz950o?at_medium=RSS&at_campaign=rss",
+   "top": true,
    "published": "2026-10-17T20:24:32+00:00"
   },
   {
-   "id": 6,
+   "category": "Education",
+   "headline": "Scholarships: October 10, 2026",
+   "summary": "Information on financial aid for students",
+   "why_it_matters": "",
+   "source": "The Hindu +1",
+   "url": "https://www.thehindu.com/education/scholarships-october-10-2026/article71498519.ece",
+   "top": true,
+   "published": "2026-10-17T10:48:07+00:00"
+  },
+  {
+   "category": "Sports",
+   "headline": "Atlanta Dream v Golden State Valkyries: WNBA finals 2026 Game 1 – live updates",
+   "summary": "Valkyries host Dream in opener of best-of-seven seriesGuardian writers’ predictions: Golden State or Atlanta?Reach out to Bryan on Bluesky or by emailAtlanta trailed 14-11 after Chen’s three-pointer with 2:48 remaining, ",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/sport/live/2026/oct/17/atlanta-dream-v-golden-state-valkyries-wnba-finals-2026-game-1-live-buildup",
+   "top": true,
+   "published": "2026-10-17T21:30:01+00:00"
+  },
+  {
+   "category": "Sports",
+   "headline": "Daniel Dubois v Fabio Wardley II: WBO heavyweight title fight – live",
+   "summary": "Updates from rematch at the O2 Arena in LondonPreview: Wardley predicts ‘crazy night’ | Email AlexIt was surreal watching the referee refuse to accept the white towel flung into the ring to save Dan Garber from shipping ",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/sport/live/2026/oct/17/daniel-dubois-fabio-wardley-ii-boxing-wbo-heavyweight-title-fight-live",
+   "top": true,
+   "published": "2026-10-17T21:28:47+00:00"
+  },
+  {
+   "category": "World",
+   "headline": "Photos: No Kings rallies in US urge midterm voters to cast ballots early",
+   "summary": "Thousands gathered at events throughout the country on Saturday, building on two years of No Kings marches.",
+   "why_it_matters": "",
+   "source": "Al Jazeera",
+   "url": "https://www.aljazeera.com/gallery/2026/10/17/photos-no-kings-rallies-in-us-urge-midterm-voters-to-cast-ballots-early?traffic_source=rss",
+   "top": true,
+   "published": "2026-10-17T21:08:10+00:00"
+  },
+  {
+   "category": "World",
+   "headline": "Cost of living protests hit Belgium, Italy, Portugal and France",
+   "summary": "Hundreds of thousands took to the streets for separate demonstrations putting pressure on governments across the EU.",
+   "why_it_matters": "",
+   "source": "Al Jazeera",
+   "url": "https://www.aljazeera.com/news/2026/10/17/cost-of-living-protests-hit-belgium-italy-portugal-and-france?traffic_source=rss",
+   "top": true,
+   "published": "2026-10-17T21:02:26+00:00"
+  },
+  {
    "category": "India",
    "headline": "Rani Abbakka Chowta: the Warrior Queen of the Seas",
    "summary": "Forgotten amidst many names which came up much later in India’s freedom struggle, Rani Abbakka Chowta is a name we should not let fade away in the pages of our country’s history",
    "why_it_matters": "",
    "source": "The Hindu",
    "url": "https://www.thehindu.com/children/rani-abbakka-chowta-the-warrior-queen-of-the-seas/article71586776.ece",
+   "top": true,
    "published": "2026-10-17T20:22:30+00:00"
   },
   {
-   "id": 7,
    "category": "India",
    "headline": "Andhra University delegation in U.S. for centenary outreach; MoU with University of Houston on the table",
    "summary": "Andhra University Vice-Chancellor holds talks with the University of Houston ahead of the final event in New Jersey on October 17",
    "why_it_matters": "",
    "source": "The Hindu",
    "url": "https://www.thehindu.com/news/national/andhra-pradesh/andhra-university-delegation-in-us-for-centenary-outreach-mou-with-university-of-houston-on-the-table/article71587881.ece",
+   "top": true,
    "published": "2026-10-17T20:22:18+00:00"
   },
   {
-   "id": 8,
+   "category": "Business",
+   "headline": "Oil prices retreat as investors weigh supply outlook, West Asia tensions",
+   "summary": "Brent crude futures fell $1.64, or 1.6%, to $104.42 a barrel by 0337 GMT, while U.S. West Texas Intermediate crude futures were down 98 cents, or 1%, to $94.11, reversing gains from the ‌previous session",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/business/oil-prices-dip-as-supply-risks-from-west-asia-tensions-clash/article71586615.ece",
+   "top": true,
+   "published": "2026-10-17T19:42:40+00:00"
+  },
+  {
+   "category": "Business",
+   "headline": "Beyond ‘Harvard Envy’: why Indian B-Schools must stop imitating the West",
+   "summary": "A large part of Indian management education still operates under the belief that global legitimacy flows mainly from replicating Western institutional models, pedagogies, ranking and accreditation logic and intellectual ",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/education/beyond-harvard-envy-why-indian-b-schools-must-stop-imitating-the-west/article71573988.ece",
+   "top": true,
+   "published": "2026-10-17T19:42:01+00:00"
+  },
+  {
+   "category": "Lifestyle",
+   "headline": "How Australia’s tipping culture got awkward – and what to do about it",
+   "summary": "Ten per cent, 20%, 25%? If you’ve made a cashless payment at a cafe or pub lately there’s a reasonable chance you’ve been prompted to tip. Isabella Lee looks into the arrival of US-style tip requests and where that money",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/lifeandstyle/2026/oct/18/how-australias-tipping-culture-got-awkward-and-what-to-do-about-it",
+   "top": true,
+   "published": "2026-10-17T19:30:38+00:00"
+  },
+  {
+   "category": "Science",
+   "headline": "Fast-moving California wildfire burns homes as people are ordered to leave",
+   "summary": "Fanned by the fierce Santa Ana winds, the Norte Fire is one of 13 burning across the state.",
+   "why_it_matters": "",
+   "source": "BBC",
+   "url": "https://www.bbc.co.uk/news/articles/c6vgjnk8nw2wo?at_medium=RSS&at_campaign=rss",
+   "top": true,
+   "published": "2026-10-17T19:13:21+00:00"
+  },
+  {
+   "category": "World",
+   "headline": "Anti-government protesters battle with police in Albania",
+   "summary": "There were violent clashes between demonstrators and riot police throughout Saturday in the capital Tirana.",
+   "why_it_matters": "",
+   "source": "BBC",
+   "url": "https://www.bbc.co.uk/news/articles/crwydey50xeno?at_medium=RSS&at_campaign=rss",
+   "top": false,
+   "published": "2026-10-17T20:53:00+00:00"
+  },
+  {
+   "category": "World",
+   "headline": "Violent clashes, looting and buildings ablaze as hundreds arrested after France protests",
+   "summary": "Disorder broke out in cities across the country on a day in which more than half a million joined cost of living protests.",
+   "why_it_matters": "",
+   "source": "BBC",
+   "url": "https://www.bbc.co.uk/news/articles/c6d937wedj7jo?at_medium=RSS&at_campaign=rss",
+   "top": false,
+   "published": "2026-10-17T20:52:17+00:00"
+  },
+  {
+   "category": "World",
+   "headline": "Ten killed in fire at beach resort in Bangladesh",
+   "summary": "Ten people, including six members of the same family, were killed in a fire at a beach resort in Bangladesh.",
+   "why_it_matters": "",
+   "source": "Al Jazeera",
+   "url": "https://www.aljazeera.com/video/newsfeed/2026/10/17/17-10-sv-coxsbazaar-hotel-blaze-_-bd?traffic_source=rss",
+   "top": false,
+   "published": "2026-10-17T20:50:01+00:00"
+  },
+  {
    "category": "India",
    "headline": "‘In recorded history, Ladakh was never a part of China’: Ladakh leaders reject China’s recent statement",
    "summary": "Chinese Foreign Ministry said earlier that China has never recognised Ladakh",
    "why_it_matters": "",
    "source": "The Hindu",
    "url": "https://www.thehindu.com/news/national/ladakh/in-recorded-history-ladakh-was-never-a-part-of-china-ladakh-leaders-reject-chinas-recent-statement/article71587252.ece",
+   "top": false,
    "published": "2026-10-17T20:22:03+00:00"
   },
   {
-   "id": 9,
+   "category": "India",
+   "headline": "Earth cave-in at Akkulam: Collector halts school building construction, orders evacuation of adjacent flat residents",
+   "summary": "Earth caved in barely 4 m from apartments on Tuesday. A boundary wall was destroyed and a 50-m stretch of road in front of apartments collapsed",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/news/national/kerala/earth-cave-in-at-akkulam-collector-halts-school-building-construction-orders-evacuation-of-adjacent-flat-residents/article71582896.ece",
+   "top": false,
+   "published": "2026-10-17T20:21:16+00:00"
+  },
+  {
+   "category": "India",
+   "headline": "Work together to win local body polls, Janardhan Reddy tells alliance leaders in Annamayya",
+   "summary": "The Roads and Buildings Minister B.C. Janardhan Reddy says the YSRCP has no moral right to seek votes in the local body elections",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/news/national/andhra-pradesh/work-together-to-win-local-body-polls-janardhan-reddy-tells-alliance-leaders-in-annamayya/article71587786.ece",
+   "top": false,
+   "published": "2026-10-17T20:20:30+00:00"
+  },
+  {
+   "category": "Politics",
+   "headline": "Reform candidate filmed saying asylum seekers should be put in ‘concentration camps’",
+   "summary": "Would-be MP recorded telling undercover reporter in ITV investigation that Muslims could not be BritishA would-be Reform UK MP told an undercover reporter that Muslims could not be British and asylum seekers should be pu",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/politics/2026/oct/17/reform-candidate-filmed-saying-asylum-seekers-should-be-put-in-concentration-camps",
+   "top": false,
+   "published": "2026-10-17T19:00:41+00:00"
+  },
+  {
+   "category": "Politics",
+   "headline": "SNP says campaign for next referendum on independence ‘has already begun’",
+   "summary": "John Swinney tells party conference SNP will use ‘six-figure war chest’ to renew argument for leaving UKJohn Swinney has said that the second referendum campaign for Scottish independence “has already begun”, revealing a",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/politics/2026/oct/17/snp-campaign-second-referendum-independence-john-swinney",
+   "top": false,
+   "published": "2026-10-17T15:45:53+00:00"
+  },
+  {
+   "category": "Politics",
+   "headline": "Fraud, affordability and Trump policies drive friction in Minnesota Senate debate",
+   "summary": "The major party candidates for Minnesota's U.S. Senate seat faced off in an hourlong debate Friday on MPR News with fraud, affordability and fallout from the Trump administration's policies as key points of friction.",
+   "why_it_matters": "",
+   "source": "NPR",
+   "url": "https://www.npr.org/2026/10/17/nx-s1-6004910/minn-us-senate-race",
+   "top": false,
+   "published": "2026-10-17T11:43:14+00:00"
+  },
+  {
+   "category": "Politics",
+   "headline": "Week in Politics: Trump's Russian diesel deal update; why the DOJ is suing California",
+   "summary": "We look at where things are in the deal President Trump says he made to import Russian diesel, plus the reason why the Justice Department is suing California.",
+   "why_it_matters": "",
+   "source": "NPR",
+   "url": "https://www.npr.org/2026/10/17/nx-s1-5998079/week-in-politics-trumps-russian-diesel-deal-update-why-the-doj-is-suing-california",
+   "top": false,
+   "published": "2026-10-17T11:43:08+00:00"
+  },
+  {
+   "category": "Politics",
+   "headline": "Briton threatened with deportation from Sweden over Brexit rules goes into hiding",
+   "summary": "Mark Smith, who has severe health issues, says he was told three times he needed to do nothing in order to remain after BrexitA seriously ill British man living in Sweden has been forced into hiding amid fears he will be",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/uk-news/2026/oct/17/we-are-in-hiding-briton-severe-health-issues-fears-deportation-sweden",
+   "top": false,
+   "published": "2026-10-17T11:00:30+00:00"
+  },
+  {
+   "category": "Governance",
+   "headline": "‘Drones all night. By morning, you smell the smoke’: life in the last hotel on Ukraine’s frontline",
+   "summary": "Amid blackouts, artillery fire and the onslaught of Russian drone attacks, the Richelievsky in Kherson provides a refuge for those with nowhere else to goThere is one important rule in the Richelievsky, Kherson’s last fu",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/world/2026/oct/17/ukraine-kherson-richelievsky-displaced-drones-last-hotel-frontline",
+   "top": false,
+   "published": "2026-10-17T11:00:30+00:00"
+  },
+  {
+   "category": "Governance",
+   "headline": "As King Charles heads to the Caribbean, he should know that Winston Churchill admitted to imperial plunder 90 years ago | Kenneth Mohammed",
+   "summary": "Modern politicians play on tales of empire to exaggerate what Britain left behind, but the monarch should consider a historical speech on imperial plunder For us in the Caribbean, there is something surreal about Britain",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/global-development/2026/oct/17/king-charles-caribbean-winston-churchill-empire-britain-wealth",
+   "top": false,
+   "published": "2026-10-17T05:00:21+00:00"
+  },
+  {
+   "category": "Finance",
+   "headline": "Govt. to roll out National Electricity Data Sharing framework in October: Power Secretary",
+   "summary": "Power Secretary Pankaj Agarwal added that a data governance committee would also be set up at the national level which would be headed by Chairperson of the Central Electricity Authority.",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/business/Industry/govt-to-roll-out-national-electricity-data-sharing-framework-in-october-power-secretary/article71584372.ece",
+   "top": false,
+   "published": "2026-10-17T18:48:08+00:00"
+  },
+  {
+   "category": "Finance",
+   "headline": "Rupee rises 19 paise to close at 95.17 against U.S. dollar",
+   "summary": "orex traders said the Indian rupee rose to a one-month high on the RBI's measures to curb speculative bets",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/business/Economy/rupee-rises-19-paise-to-close-at-9517-against-us-dollar/article71583687.ece",
+   "top": false,
+   "published": "2026-10-17T18:26:19+00:00"
+  },
+  {
+   "category": "Finance",
+   "headline": "Stock markets close lower amid elevated crude oil, rising inflation",
+   "summary": "The 30-share BSE Sensex declined 251.89 points, or 0.34% to settle at 72,781.89. During the day, it hit a high of 73,195.26 and a low of 72,578.75",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/business/Economy/stock-markets-close-lower-amid-elevated-crude-oil-rising-inflation/article71583631.ece",
+   "top": false,
+   "published": "2026-10-17T18:25:33+00:00"
+  },
+  {
+   "category": "Finance",
+   "headline": "Food and fuel push wholesale inflation to series-high of 11.4% in September 2026",
+   "summary": "This is the highest inflation as per the new series of the WPI, which has data since April 2024. According to the old series, September’s inflation is the highest since August 2022",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/business/Economy/september-wpi-inflation-rises-to-1139-as-food-fuel-and-manufactured-goods-prices-increase/article71582698.ece",
+   "top": false,
+   "published": "2026-10-17T18:23:01+00:00"
+  },
+  {
+   "category": "Finance",
+   "headline": "Robert E. Hall and Michael Woodford | Putting people in economics",
+   "summary": "The winners of the 2026 Economics Nobel Prize transformed macroeconomics by showing how individual choices, household expectations and business behaviour shape the economy and influence the effectiveness of government po",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/business/Economy/robert-e-hall-and-michael-woodford-putting-people-in-economics/article71597633.ece",
+   "top": false,
+   "published": "2026-10-17T17:59:06+00:00"
+  },
+  {
+   "category": "Business",
+   "headline": "Govt proposes BS-VII emission norms from April 2029; adds brake, tyre, battery-durability rules",
+   "summary": "India currently follows Bharat Stage VI standards, introduced nationwide in April 2020, which significantly tightened vehicle-emission requirements and brought the country closer to international regulatory practices",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/business/Industry/govt-proposes-bs-vii-emission-norms-from-april-2029-adds-brake-tyre-battery-durability-rules/article71585240.ece",
+   "top": false,
+   "published": "2026-10-17T19:13:13+00:00"
+  },
+  {
+   "category": "Business",
+   "headline": "Hyundai to invest additional ₹4,000 crore in Pune plant, to raise output to 3,20,000 units",
+   "summary": "",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/business/hyundai-to-invest-additional-4000-crore-in-pune-plant-to-raise-output-to-320000-units/article71585147.ece",
+   "top": false,
+   "published": "2026-10-17T19:04:29+00:00"
+  },
+  {
+   "category": "Business",
+   "headline": "BoB stock tanks 3.5% as NMC founder Shetty sues bank for $15 bn",
+   "summary": "Mr. Shetty has accused the Bank and 25 others of acting as an instrument in the siphoning of funds that led to the collapse of his business empire. Bank said it will defend the suit firmly and take all steps necessary to",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/business/bob-stock-tanks-35-as-nmc-founder-shetty-sues-bank-for-15-bn/article71584927.ece",
+   "top": false,
+   "published": "2026-10-17T19:01:26+00:00"
+  },
+  {
+   "category": "Education",
+   "headline": "Five up-and-coming careers in Finance that students can consider",
+   "summary": "As finance evolves, here are new career paths that impact the industry and offer long-term growth prospects",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/education/careers/five-up-and-coming-careers-in-finance-that-students-can-consider/article71550047.ece",
+   "top": false,
+   "published": "2026-10-17T13:02:17+00:00"
+  },
+  {
+   "category": "Education",
+   "headline": "‘We’re not playing games’: Parents launch playground protests to fight school field sell-off",
+   "summary": "School looking to sell piece of open land beloved by people in Devon town to fund refurbishmentsOn Saturdays throughout autumn, residents of Totnes have met at a field on the banks of the River Dart to play ballgames, fl",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/uk-news/2026/oct/17/were-not-playing-games-parents-launch-playground-protests-to-fight-school-field-sell-off",
+   "top": false,
+   "published": "2026-10-17T13:00:31+00:00"
+  },
+  {
+   "category": "Education",
+   "headline": "What does ‘collaborate’ mean?",
+   "summary": "",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/education/what-does-collaborate-mean/article71572605.ece",
+   "top": false,
+   "published": "2026-10-17T12:17:05+00:00"
+  },
+  {
+   "category": "Education",
+   "headline": "Why every university needs an AI-evaluation layer before an AI curriculum",
+   "summary": "Higher education institutions need assessment systems capable of measuring higher-order thinking, validating genuine learning, and generating meaningful academic insights",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/education/colleges/why-every-university-needs-an-ai-evaluation-layer-before-an-ai-curriculum/article71549895.ece",
+   "top": false,
+   "published": "2026-10-17T12:15:58+00:00"
+  },
+  {
+   "category": "Environment",
+   "headline": "Almost all NSW homes destroyed in black summer bushfires were within 100 metres of flammable vegetation",
+   "summary": "Exclusive: Research confirms official advice about high-risk properties and warns worsening conditions will make more homes unsafeSign up for climate and environment editor Adam Morton’s free Clear Air newsletter hereAlm",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/australia-news/2026/oct/18/nsw-homes-destroyed-in-black-summer-bushfires-in-high-risk-buffer-zone",
+   "top": false,
+   "published": "2026-10-17T19:00:40+00:00"
+  },
+  {
+   "category": "Environment",
+   "headline": "Nigeria drove thousands of gold miners from a national park. But can it keep them out?",
+   "summary": "A military-backed operation shut down a major illegal gold mining site in Gashaka-Gumti National Park, driving more than 4,000 miners from Nigeria’s largest national park, according to the Africa Nature Investors Foundat",
+   "why_it_matters": "",
+   "source": "Mongabay",
+   "url": "https://news.mongabay.com/2026/10/nigeria-drove-thousands-of-gold-miners-from-a-national-park-but-can-it-keep-them-out/",
+   "top": false,
+   "published": "2026-10-17T16:18:07+00:00"
+  },
+  {
+   "category": "Environment",
+   "headline": "From little acorns … to his 1,000th article for the Guardian country diary",
+   "summary": "As Mark Cocker approaches a landmark for the world’s oldest column in an English-language newspaper, he is still inspired by powerful encounters with natureIn the autumn of 1987, Mark Cocker sat in a field near Norwich a",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/environment/2026/oct/17/1000-articles-for-the-guardian-country-diary-mark-cocker",
+   "top": false,
+   "published": "2026-10-17T12:00:30+00:00"
+  },
+  {
+   "category": "Environment",
+   "headline": "Honeybees are barging aside wild pollinators in hunt for pollen and nectar, study finds",
+   "summary": "As a surge in beekeepers has led to increased numbers of honeybees, researchers record them pushing bumblebees and other rival species away from flowersHoneybees are outcompeting wild pollinators for resources by aggress",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/environment/2026/oct/17/honeybees-are-barging-aside-wild-pollinators-in-hunt-for-pollen-and-nectar-study-finds",
+   "top": false,
+   "published": "2026-10-17T09:00:27+00:00"
+  },
+  {
+   "category": "Environment",
+   "headline": "Squash down: smaller pumpkins expected this Halloween after drought in England",
+   "summary": "Data shows 2026 could be worst harvest on record, as growers suggest painting faces on vegetables instead of carvingIn the lead-up to Halloween, front porches across the country feature fat, proudly carved pumpkins, lit ",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/lifeandstyle/2026/oct/17/smaller-pumpkins-halloween-drought-england",
+   "top": false,
+   "published": "2026-10-17T09:00:26+00:00"
+  },
+  {
+   "category": "Climate & Energy",
+   "headline": "Hiding in plane sight: the invisible turbulence that can strike out of a clear blue sky",
+   "summary": "As the planet warms, airlines are grappling with what this means for air travel – and for the passengers who simply refuse to keep their seatbelts fastenedIt was a swelteringly hot afternoon in south-west Myanmar on 21 M",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/world/ng-interactive/2026/oct/18/invisible-clear-air-turbulence-airline-safety-climate-crisis",
+   "top": false,
+   "published": "2026-10-17T19:00:40+00:00"
+  },
+  {
+   "category": "Climate & Energy",
+   "headline": "Cloudy with a chance of moths: bogong swarms are bamboozling weather radars across NSW",
+   "summary": "Radar systems designed for rain, hail and snow are picking up bogong moths migrating to the Australian AlpsGet our breaking news email, free app or daily news podcastIt was during Sydney’s Olympic Games in 2000, people s",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/environment/2026/oct/17/bogong-moth-swarms-rain-weather-radars",
+   "top": false,
+   "published": "2026-10-16T23:00:14+00:00"
+  },
+  {
+   "category": "Climate & Energy",
+   "headline": "COP17: Which countries have released new pledges to tackle nature loss?",
+   "summary": "Some 58% of countries have met a UN call to submit new pledges on addressing nature loss – two years… The post COP17: Which countries have released new pledges to tackle nature loss? appeared first on Carbon Brief.",
+   "why_it_matters": "",
+   "source": "Carbon Brief",
+   "url": "https://www.carbonbrief.org/cop17-which-countries-have-released-new-pledges-to-tackle-nature-loss",
+   "top": false,
+   "published": "2026-10-16T11:54:59+00:00"
+  },
+  {
+   "category": "Climate & Energy",
+   "headline": "Just what damage can the emissions from a new fossil fuel facility cause? A new tool has estimates",
+   "summary": "From crop failures to coral bleaching, a new tool developed by climate scientists aims to predict in detail the impacts of each megatonne of carbon emissions Want to get more charts in your inbox every fortnight? Sign up",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/news/ng-interactive/2026/oct/16/just-what-damage-can-the-emissions-from-a-new-fossil-fuel-facility-cause-a-new-tool-has-estimates",
+   "top": false,
+   "published": "2026-10-15T19:00:38+00:00"
+  },
+  {
+   "category": "Climate & Energy",
+   "headline": "COP17: Tracking progress towards the UN’s 2030 nature targets",
+   "summary": "Countries will meet in Armenia this month to carry out the first global review of progress towards meeting key nature… The post COP17: Tracking progress towards the UN’s 2030 nature targets appeared first on Carbon Brief",
+   "why_it_matters": "",
+   "source": "Carbon Brief",
+   "url": "https://interactive.carbonbrief.org/nature-targets-2030-progress/",
+   "top": false,
+   "published": "2026-10-15T16:07:42+00:00"
+  },
+  {
+   "category": "Science",
+   "headline": "New drug reverses severe fatty liver disease by repairing the gut",
+   "summary": "Scientists have discovered that a potential new drug can reverse severe fatty liver disease in animal models by restoring gut health and blocking harmful substances from reaching the liver. The breakthrough could pave th",
+   "why_it_matters": "",
+   "source": "ScienceDaily",
+   "url": "https://www.sciencedaily.com/releases/2026/10/261016080912.htm",
+   "top": false,
+   "published": "2026-10-17T13:45:06+00:00"
+  },
+  {
+   "category": "Science",
+   "headline": "NASA’s Roman Space Telescope exceeds expectations by nearly 30%",
+   "summary": "NASA’s Nancy Grace Roman Space Telescope has exceeded expectations after engineers made incredibly tiny adjustments to sharpen its view of the universe. By moving a mirror just one-sixteenth the width of a human hair, th",
+   "why_it_matters": "",
+   "source": "ScienceDaily",
+   "url": "https://www.sciencedaily.com/releases/2026/10/261016070630.htm",
+   "top": false,
+   "published": "2026-10-17T13:28:13+00:00"
+  },
+  {
+   "category": "Science",
+   "headline": "This bird flies thousands of miles, but its wings have a catch",
+   "summary": "Scientists have uncovered an unexpected trade-off in the wings of the European nightjar, a bird that migrates thousands of kilometers but sacrifices high-speed flight efficiency to hunt insects with remarkable agility. E",
+   "why_it_matters": "",
+   "source": "ScienceDaily",
+   "url": "https://www.sciencedaily.com/releases/2026/10/261016070624.htm",
+   "top": false,
+   "published": "2026-10-17T13:05:02+00:00"
+  },
+  {
+   "category": "Science",
+   "headline": "Brain cells meant to protect us may be fueling cognitive decline",
+   "summary": "Scientists have uncovered a surprising cause of age-related cognitive decline involving brain cells previously thought to be entirely beneficial. As these cells become dysfunctional, they can produce abnormal amounts of ",
+   "why_it_matters": "",
+   "source": "ScienceDaily",
+   "url": "https://www.sciencedaily.com/releases/2026/10/261015073222.htm",
+   "top": false,
+   "published": "2026-10-17T12:44:22+00:00"
+  },
+  {
+   "category": "Space",
+   "headline": "On this day in space! Oct. 17, 2016: Private Antares rocket returns to flight after catastrophic launch explosion",
+   "summary": "On Oct. 17, 2016, the Antares rocket now built by Northrop Grumman Space Systems returned to flight to come back from a catastrophic explosion. Here's why it mattered.",
+   "why_it_matters": "",
+   "source": "Space.com",
+   "url": "https://www.space.com/space-exploration/on-this-day-in-space-october-17-2026",
+   "top": false,
+   "published": "2026-10-17T14:49:01+00:00"
+  },
+  {
+   "category": "Space",
+   "headline": "This Week In Space podcast: Episode 232 — The Lunar Dump",
+   "summary": "On Episode 232 of This Week In Space, Rod Pyle and Tariq Malik are joined by Chelsea Gohd to talk about the recent large data dump from the Artemis II mission.",
+   "why_it_matters": "",
+   "source": "Space.com",
+   "url": "https://www.space.com/entertainment/space-movies-shows/this-week-in-space-podcast-episode-232-the-lunar-dump",
+   "top": false,
+   "published": "2026-10-17T14:17:38+00:00"
+  },
+  {
+   "category": "Space",
+   "headline": "6 scientifically accurate star projectors to turn any room into a home planetarium",
+   "summary": "These six realistic star projectors are much more than mood lighting. Their projections are scientifically accurate enough to serve as actual stargazing practice, perfect for budding astronomers, young and old.",
+   "why_it_matters": "",
+   "source": "Space.com",
+   "url": "https://www.space.com/stargazing/skywatching-kit/six-scientifically-accurate-star-projectors-to-turn-any-room-into-a-home-planetarium",
+   "top": false,
+   "published": "2026-10-17T14:00:00+00:00"
+  },
+  {
+   "category": "Space",
+   "headline": "'Lanterns' shocking finale left us with a lot of unanswered questions for a potential season 2",
+   "summary": "John Stewart goes rogue in Sector 2814 and embraces fear hopefully leading into season 2",
+   "why_it_matters": "",
+   "source": "Space.com",
+   "url": "https://www.space.com/entertainment/space-movies-shows/lanterns-shocking-finale-left-us-with-a-lot-of-unanswered-questions-for-a-potential-season-2",
+   "top": false,
+   "published": "2026-10-17T12:00:00+00:00"
+  },
+  {
+   "category": "Space",
+   "headline": "The Orionid meteor shower peaks next week! Here's what to expect",
+   "summary": "The Orionid meteor shower peaks overnight on Oct. 21-22, bringing a spectacular display of shooting stars to the autumn sky.",
+   "why_it_matters": "",
+   "source": "Space.com",
+   "url": "https://www.space.com/stargazing/meteor-showers/the-orionid-meteor-shower-peaks-oct-21-22-2026-heres-what-to-expect",
+   "top": false,
+   "published": "2026-10-17T10:00:00+00:00"
+  },
+  {
+   "category": "Technology",
+   "headline": "Health Quiz: On arthritis",
+   "summary": "Everybody has heard of arthritis: a senior citizen in the family may be suffering, or perhaps someone at work. The term is common enough, but with World Arthritis Day coming up on October 13, how much do you know about i",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/sci-tech/science/health-quiz-on-arthritis/article71582241.ece",
+   "top": false,
+   "published": "2026-10-17T17:40:50+00:00"
+  },
+  {
+   "category": "Technology",
+   "headline": "Towards an age-ready Keralam: translating rights into care",
+   "summary": "The Keralam Senior Citizens (Care and Protection of Rights) Bill, 2026, a first-of-its-kind legislation in the country, is a welcome step towards protecting the rights and well-being of the elderly",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/news/national/kerala/towards-an-age-ready-keralam-translating-rights-into-care/article71579075.ece",
+   "top": false,
+   "published": "2026-10-17T17:40:47+00:00"
+  },
+  {
+   "category": "Technology",
+   "headline": "Two Assistant Professors, two PG students suspended for medical negligence at Kakinada GGH",
+   "summary": "Rangaraya Medical College Principal says a cannula was left in the woman’s abdomen during delivery surgery and was removed after she was readmitted with stomach pain",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/news/national/andhra-pradesh/two-assistant-professors-two-pg-students-suspended-for-medical-negligence-at-kakinada-ggh/article71580270.ece",
+   "top": false,
+   "published": "2026-10-17T17:40:45+00:00"
+  },
+  {
+   "category": "Technology",
+   "headline": "Keralam Senior Citizens Bill referred to Assembly Subject Committee",
+   "summary": "Bill aims at promoting healthy and active ageing, regulation of senior citizen care centres, capacity-building for family and care givers, and protection of rights, dignity, and social security of the elderly",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/news/national/kerala/keralam-senior-citizens-bill-referred-to-assembly-subject-committee/article71578941.ece",
+   "top": false,
+   "published": "2026-10-17T17:39:50+00:00"
+  },
+  {
+   "category": "AI",
+   "headline": "Roundtables: A Conversation With the Creator of AI-Designed Viruses",
+   "summary": "Listen to the session or watch below Can AI design new life forms? In 2025, Stanford University PhD student Samuel King came up with a preliminary answer when he used a generative AI model to propose genetic blueprints f",
+   "why_it_matters": "",
+   "source": "MIT Tech Review",
+   "url": "https://www.technologyreview.com/2026/10/16/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses/",
+   "top": false,
+   "published": "2026-10-16T18:00:00+00:00"
+  },
+  {
+   "category": "Health",
+   "headline": "Display rates of healthcare services prominently, Centre tells States",
+   "summary": "Clearly visible display will enable patients to take informed decisions, build trust, prevent billing-related disputes; Health Ministry also urges clinical establishments to display package rates for international patien",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/news/national/display-rates-of-healthcare-services-prominently-centre-tells-states/article71574327.ece",
+   "top": false,
+   "published": "2026-10-17T15:02:11+00:00"
+  },
+  {
+   "category": "Health",
+   "headline": "T.N. achieves target of National AIDS Control Programme-Phase V: Health Minister",
+   "summary": "The Minister, while participating in an event on a State-level intensified IEC campaign on HIV/AIDS, says the prevalence of HIV/AIDS has been down by half in the State; it has dropped from 0.40% in 2010 to 0.19% in 2023 ",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/news/cities/chennai/tn-achieves-target-of-national-aids-control-programme-phase-v-health-minister/article71575343.ece",
+   "top": false,
+   "published": "2026-10-17T15:02:02+00:00"
+  },
+  {
+   "category": "Health",
+   "headline": "Keralam Senior Citizens (Care and Protection) Bill to focus on protection of rights, dignity of elderly",
+   "summary": "The Bill that will be tabled in the Assembly on October 13 also aims at promoting active ageing, regulation of senior citizen care centres, and capacity-building for family and caregivers",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/news/national/kerala/keralam-senior-citizens-care-and-protection-bill-to-focus-on-protection-of-rights-dignity-of-elderly/article71575919.ece",
+   "top": false,
+   "published": "2026-10-17T15:01:59+00:00"
+  },
+  {
+   "category": "Health",
+   "headline": "Supreme Court wants cap on trade margin for all essential medicines and medical products",
+   "summary": "Government proposes 30% trade-margin cap on patented and non-patented cancer medicines, but top court asks why a margin cap cannot be extended to all medicines and medical products; the court says the government has to e",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/sci-tech/health/supreme-court-wants-cap-on-trade-margin-for-all-essential-medicines-and-medical-products/article71575807.ece",
+   "top": false,
+   "published": "2026-10-17T15:01:40+00:00"
+  },
+  {
+   "category": "Health",
+   "headline": "Pope pictured for first time since surgery and cancer diagnosis",
+   "summary": "The pontiff was diagnosed with lung cancer after having surgery at Rome's Gemelli Hospital on Tuesday.",
+   "why_it_matters": "",
+   "source": "BBC",
+   "url": "https://www.bbc.co.uk/news/articles/cw146ej00yn7o?at_medium=RSS&at_campaign=rss",
+   "top": false,
+   "published": "2026-10-16T23:20:37+00:00"
+  },
+  {
+   "category": "Law & Justice",
+   "headline": "Pornography with strangulation and incest to be banned in England and Wales next month",
+   "summary": "Campaigners welcome legislation which follows recommendations by 2025 review into pornography regulationPornography that depicts strangulation and incestuous relationships will be banned in England and Wales from early N",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/society/2026/oct/16/pornography-strangulation-incest-ban-uk-november",
+   "top": false,
+   "published": "2026-10-16T07:09:49+00:00"
+  },
+  {
+   "category": "Law & Justice",
+   "headline": "Britain is addicted to prisons. Our crumbling probation service proves they don’t work | Polly Toynbee",
+   "summary": "The current system is unable to quench the public thirst for locking people up – and certainly doesn’t ensure proper care once they are releasedPublic services need more investment across the board. Every day, another wr",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/commentisfree/2026/oct/16/britain-addicted-prisons-crumbling-probation-service",
+   "top": false,
+   "published": "2026-10-16T07:00:54+00:00"
+  },
+  {
+   "category": "Law & Justice",
+   "headline": "UK law could deny Fayed accusers recognition as victims of human trafficking",
+   "summary": "‘Unfair’ immigration and asylum bill could fail to support sexual violence survivors, anti-slavery commissioner saysSurvivors of sexual violence could wrongly be denied recognition as victims of human trafficking under c",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/law/2026/oct/16/fayed-abuse-accusers-could-be-denied-recognition-as-trafficking-victims-under-new-uk-law",
+   "top": false,
+   "published": "2026-10-16T07:00:53+00:00"
+  },
+  {
+   "category": "Law & Justice",
+   "headline": "Saudi Arabia to execute man for being at protests and funerals when he was 15",
+   "summary": "Use of death penalty against people for crimes committed when they were children a ‘new low’, say rights groupsA young man faces imminent execution in Saudi Arabia for attending protests and funerals when he was aged 15 ",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/global-development/2026/oct/16/saudi-arabia-to-execute-man-for-being-at-protests-and-funerals-when-he-was-15",
+   "top": false,
+   "published": "2026-10-16T05:00:51+00:00"
+  },
+  {
+   "category": "Law & Justice",
+   "headline": "Matt Gaetz accused in suit of sex trafficking two women in Florida",
+   "summary": "Jane Does allege ex-congressman and two others coordinated ‘payments, drugs and travel’ for sexual actsThe Republican former congressman Matt Gaetz has been accused of participating in the sex trafficking of two young wo",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/us-news/2026/oct/15/matt-gaetz-florida-sex-traffing-lawsuit",
+   "top": false,
+   "published": "2026-10-15T17:08:21+00:00"
+  },
+  {
+   "category": "Society",
+   "headline": "More NHS staff sacked over attacks victims' records",
+   "summary": "Nottingham University Hospitals NHS Trust says a new system will be brought in to protect records.",
+   "why_it_matters": "",
+   "source": "BBC",
+   "url": "https://www.bbc.co.uk/news/articles/cmd7q8ld3dd3o?at_medium=RSS&at_campaign=rss",
+   "top": false,
+   "published": "2026-10-17T16:34:39+00:00"
+  },
+  {
+   "category": "Society",
+   "headline": "Scotland 'not like Manchester', Swinney says in dig at PM Burnham",
+   "summary": "The first minister also used his SNP conference speech to announce plans for Scotland's bus network to be brought under public control.",
+   "why_it_matters": "",
+   "source": "BBC",
+   "url": "https://www.bbc.co.uk/news/articles/cmx2844n7nepo?at_medium=RSS&at_campaign=rss",
+   "top": false,
+   "published": "2026-10-17T15:36:05+00:00"
+  },
+  {
+   "category": "Society",
+   "headline": "My week wearing ankle weights: 'I was helping kickstart my muscles'",
+   "summary": "When a knee injury forced me to change my fitness routine, I added Sportneer ankle weights – and got a decent workoutI’m a personal trainer. Here’s the equipment I useSign up for the Filter US newsletter, your weekly gui",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/thefilter-us/2026/oct/17/ankle-weights-workout-fitness",
+   "top": false,
+   "published": "2026-10-17T14:15:32+00:00"
+  },
+  {
+   "category": "Society",
+   "headline": "Husband calls for PM to intervene after wife detained in Egypt",
+   "summary": "Eman el-Shazly has been held by authorities in Egypt for two months, allegedly due to her sister's activism.",
+   "why_it_matters": "",
+   "source": "BBC",
+   "url": "https://www.bbc.co.uk/news/articles/c6dxw58vrqnpo?at_medium=RSS&at_campaign=rss",
+   "top": false,
+   "published": "2026-10-17T14:07:46+00:00"
+  },
+  {
+   "category": "Society",
+   "headline": "UK must protect against Russian 'hybrid attacks', ex-national security adviser says",
+   "summary": "Lord Ricketts says more should be spent on improving the resilience of energy, transport, air traffic control and defence sites.",
+   "why_it_matters": "",
+   "source": "BBC",
+   "url": "https://www.bbc.co.uk/news/articles/cmze4y9rjepro?at_medium=RSS&at_campaign=rss",
+   "top": false,
+   "published": "2026-10-17T12:56:09+00:00"
+  },
+  {
+   "category": "Literature",
+   "headline": "Isabel Allende wins €1m Spanish literary prize under pseudonym",
+   "summary": "Chilean-American author awarded Premio Planeta for sequel to her 1982 debut novel, The House of the SpiritsThe Chilean-American author Isabel Allende has won Spain’s €1m (£843,000) Premio Planeta, one of the world’s most",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/books/2026/oct/17/isabel-allende-wins-premio-planeta-spanish-literary-prize-pseudonym",
+   "top": false,
+   "published": "2026-10-17T13:01:51+00:00"
+  },
+  {
+   "category": "Literature",
+   "headline": "‘Garividi Lakshmi’ movie review: Anandhi leads a compelling biopic",
+   "summary": "Director Gowri Naidu Jammu’s debut Telugu film spotlights Srikakulam burra katha artist Garividi Lakshmi with a strong story and rooted music, but the old-school treatment limits its appeal",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/entertainment/movies/garividi-lakshmi-movie-review-anandhi-leads-a-compelling-biopic/article71595326.ece",
+   "top": false,
+   "published": "2026-10-17T11:45:07+00:00"
+  },
+  {
+   "category": "Literature",
+   "headline": "‘Is there any value in writing a story in a time of chaos?’: novelist Elif Shafak on her creative crisis",
+   "summary": "The author talks about her nomadic childhood, being targeted by the Turkish government and overcoming depression to write her latest novelFor a long time Elif Shafak was referred to as Turkey’s “most widely read female a",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/books/2026/oct/17/is-there-any-value-in-writing-a-story-in-a-time-of-chaos-novelist-elif-shafak-on-her-creative-crisis",
+   "top": false,
+   "published": "2026-10-17T08:00:25+00:00"
+  },
+  {
+   "category": "Literature",
+   "headline": "‘I know I can do anything’: new archive of AS Byatt’s papers looks inside the writer’s extraordinary mind",
+   "summary": "The Booker-wining author of Possession was known for her voracious research. Now, 68 boxes of her notebooks, letters and diaries acquired by the British Library reveal how she assembled the raw material of her fictionAt ",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/books/2026/oct/17/as-byatt-british-library-literary-papers-archive",
+   "top": false,
+   "published": "2026-10-17T07:24:40+00:00"
+  },
+  {
+   "category": "Literature",
+   "headline": "Peasants hold the key to a more sustainable future: sociologist Maryam Aslany",
+   "summary": "In her new book, Aslany says that peasants are humanity’s last buffer against climate catastrophe",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/books/books-authors/interview-sociologist-maryam-aslany-peasants-makers-of-the-modern-world-bloomsbury/article71574656.ece",
+   "top": false,
+   "published": "2026-10-17T03:32:38+00:00"
+  },
+  {
+   "category": "Arts & Culture",
+   "headline": "‘It feels like the light is pushing the darkness apart’: Gellért Gombai’s best phone picture",
+   "summary": "The photographer was holidaying with his family when two shadows became a plaything for his young sonGellért Gombai, his wife and two children spend much of the year at their home in Budapest, Hungary, but most of their ",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/lifeandstyle/2026/oct/17/gellert-gombais-best-phone-picture",
+   "top": false,
+   "published": "2026-10-17T10:00:28+00:00"
+  },
+  {
+   "category": "Arts & Culture",
+   "headline": "The Influencer Project to Melanie C: your complete entertainment guide to the week ahead",
+   "summary": "A social media star comes a cropper in timely horror, and the Spice Girls ledge takes her disco- and indie-tinged bops out on a short tourThe Influencer Project Out now When your career involves constantly posting footag",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/culture/2026/oct/17/entertainment-week-ahead-influencer-project-melanie-c-tour-it-gets-worse-call-of-duty-olga-koch",
+   "top": false,
+   "published": "2026-10-17T05:00:22+00:00"
+  },
+  {
+   "category": "Arts & Culture",
+   "headline": "Kochi artist Jazeela Sherif’s solo show dwells on the meditative quality of watercolour",
+   "summary": "Unhurried Soul is an invitation for viewers to pause and reflect, says the artist",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/entertainment/art/kochi-artist-jazeela-sherifs-solo-show-dwells-on-the-meditative-quality-of-watercolour/article71594035.ece",
+   "top": false,
+   "published": "2026-10-17T03:45:07+00:00"
+  },
+  {
+   "category": "Arts & Culture",
+   "headline": "Gallerist Sharan Apparao takes a tour of some of Kolkata’s best pandals",
+   "summary": "The gallerist finds this year’s pandals a masterclass in collaboration and generosity",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/entertainment/art/lessons-from-the-pandal/article71582937.ece",
+   "top": false,
+   "published": "2026-10-17T03:30:21+00:00"
+  },
+  {
+   "category": "Arts & Culture",
+   "headline": "Masterplan review – Stanley Tucci is wasted in Amazon’s smooth-brained heist caper",
+   "summary": "A ‘family’ of criminals attempt to steal the Mona Lisa from the Louvre in pulpy and forgettable thrillerIn the last half-decade Stanley Tucci has been a source of near-inexhaustible on- screen delight, whether making fri",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/film/2026/oct/16/masterplan-stanley-tucci-movie-review",
+   "top": false,
+   "published": "2026-10-16T19:24:23+00:00"
+  },
+  {
+   "category": "Film & TV",
+   "headline": "7 Miles Out review – Carol Morley’s funny-poignant self-portrait of teenage kicks in Stockport",
+   "summary": "A daring, rich and funny study of the ordeal of having to invent and reinvent your own teenage sense of self amid confounding changesCarol Morley’s self-portrait of the artist as a young woman is rich, tender and terribl",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/film/2026/oct/17/7-miles-out-review-carol-morley",
+   "top": false,
+   "published": "2026-10-17T17:35:36+00:00"
+  },
+  {
+   "category": "Film & TV",
+   "headline": "Revisiting Vijay’s ‘Kushi’: How Deva composed this superhit album",
+   "summary": "A look at the evolution of this superhit film directed by SJ Suryah and featuring Vijay and Jyotika",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/entertainment/movies/deva-kushi-vijay-deva-death-deva-tributes-music-composer-deva-tamil-cinema-composer-deva-sj-suryah/article71596637.ece",
+   "top": false,
+   "published": "2026-10-17T16:53:12+00:00"
+  },
+  {
+   "category": "Film & TV",
+   "headline": "Deva, veteran music composer’s funeral highlights | Final rites on October 18; T.N. government to accord State honours",
+   "summary": "His mortal remains are kept at his residence in T. Nagar, Chennai, for fans and film personalities to pay their last respects until 1 p.m. on October 18",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/entertainment/music/tamil-music-director-singer-deva-passes-away-funeral-rites-condolences-tributes-songs-live-updates/article71595646.ece",
+   "top": false,
+   "published": "2026-10-17T15:50:06+00:00"
+  },
+  {
+   "category": "Film & TV",
+   "headline": "RJ Mitte, ‘Breaking Bad’ actor and disability rights champion, dies at 34",
+   "summary": "Mitte played Walter White Jr., the son of Bryan Cranston’s chemistry teacher-turned-meth dealer Walter White, in ‘Breaking Bad’",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/entertainment/movies/rj-mitte-breaking-bad-actor-and-disability-rights-champion-dies-at-34/article71577039.ece",
+   "top": false,
+   "published": "2026-10-17T15:49:38+00:00"
+  },
+  {
+   "category": "Film & TV",
+   "headline": "Teja Sajja on hosting ‘The Traitors Telugu’: I had to be serious, unlike my real personality",
+   "summary": "Teja Sajja has been facing the camera since he was a little over two. Debuting as a child actor and later transitioning into an adult lead actor, he has over 30 films to his credit. Yet, something about his new assignmen",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/videos/teja-sajja-on-hosting-the-traitors-telugu-i-had-to-be-serious-unlike-my-real-personality/article71565582.ece",
+   "top": false,
+   "published": "2026-10-17T15:35:59+00:00"
+  },
+  {
+   "category": "Music",
+   "headline": "When a Tyagaraja kriti inspires a dance production",
+   "summary": "Conceived by Dushyanth Sridhar and Anita Guha, ‘Endaro Mahanubhavulu’, which premiered recently in Chennai, explored the spirit of Tyagaraja’s composition through elaborate choreography and striking visuals.",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/entertainment/dance/when-a-tyagaraja-kriti-inspires-a-dance-production/article71563542.ece",
+   "top": false,
+   "published": "2026-10-17T15:16:02+00:00"
+  },
+  {
+   "category": "Music",
+   "headline": "Navaratri notes: How Syama Sastri’s iconic swarajatis are an intimate dialogue with the goddess",
+   "summary": "Ahead of the nine-day celebration of the goddess, exploring how Syama Sastri combined musical brilliance and profound bhakti to Kamakshi in the three swarajatis that remain among his finest creations.",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/entertainment/music/navaratri-notes-how-syama-sastris-iconic-swarajatis-are-an-intimate-dialogue-with-the-goddess/article71558596.ece",
+   "top": false,
+   "published": "2026-10-17T14:17:24+00:00"
+  },
+  {
+   "category": "Music",
+   "headline": "How Bali’s ‘Kecak’ gives the Ramayana a new voice",
+   "summary": "Led by veteran Balinese scholar and choreographer I Wayan Dibia, Kecak transforms human voices into a live orchestra to narrate episodes from the Ramayana.",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/entertainment/dance/how-balis-kecak-gives-the-ramayana-a-new-voice/article71563997.ece",
+   "top": false,
+   "published": "2026-10-17T12:45:12+00:00"
+  },
+  {
+   "category": "Music",
+   "headline": "Rohit Barker is betting big on house and Latin music with his new club in the heart of Bengaluru",
+   "summary": "Bahati is RJ and DJ Rohit Barker’s new spot in Bengaluru. We chat with the artiste about the city’s evolving nightlife, its taste in music, and leopard spotting in Masai Mara",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/food/features/rohit-barker-is-betting-big-on-house-and-latin-music-with-his-new-club-in-the-heart-of-bengaluru/article71554688.ece",
+   "top": false,
+   "published": "2026-10-17T10:51:08+00:00"
+  },
+  {
+   "category": "Music",
+   "headline": "What’s your favourite kolu song?",
+   "summary": "From timeless kritis to popular songs, here’s your Navaratri playlist.",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/entertainment/music/whats-your-favourite-kolu-song/article71582754.ece",
+   "top": false,
+   "published": "2026-10-17T09:32:35+00:00"
+  },
+  {
    "category": "Sports",
-   "headline": "Wirtz delivers but remains Liverpool's conundrum",
-   "summary": "Florian Wirtz is instrumental as Liverpool return to winning ways in the Premier League, but does he remain boss Andoni Iraola's great conundrum?",
+   "headline": "DP World India Championship: Norgaard takes lead on a rain-hit opening day",
+   "summary": "The Dane shoots six-under-par 66; McKibbin, Detry and Chacarra tied for second spot; McIlroy in tied 13th place; Om Prakash best among the Indians",
    "why_it_matters": "",
-   "source": "BBC Sport",
-   "url": "https://www.bbc.co.uk/sport/football/articles/c9j34rke27zjo?at_medium=RSS&at_campaign=rss",
-   "published": "2026-10-17T20:07:40+00:00"
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/sport/dp-world-india-championship-norgaard-gains-lead-on-a-rain-hit-opening-day/article71589016.ece",
+   "top": false,
+   "published": "2026-10-17T21:19:27+00:00"
   },
   {
-   "id": 10,
-   "category": "Science",
-   "headline": "Fast-moving California wildfire burns homes as people are ordered to leave",
-   "summary": "Fanned by the fierce Santa Ana winds, the Norte Fire is one of 13 burning across the state.",
+   "category": "Sports",
+   "headline": "Villa's Manzambi shows Newcastle what they missed out on",
+   "summary": "Aston Villa are a side back in form, with Johan Manzambi scoring the winner against a Newcastle team he turned down to move to Villa Park.",
    "why_it_matters": "",
-   "source": "BBC News",
-   "url": "https://www.bbc.co.uk/news/articles/c6vgjnk8nw2wo?at_medium=RSS&at_campaign=rss",
-   "published": "2026-10-17T19:13:21+00:00"
+   "source": "BBC",
+   "url": "https://www.bbc.co.uk/sport/football/articles/ck054652mv07o?at_medium=RSS&at_campaign=rss",
+   "top": false,
+   "published": "2026-10-17T21:18:26+00:00"
   },
   {
-   "id": 11,
-   "category": "Science",
-   "headline": "Avian flu and costs among reasons for loss of captive birds at Castle Espie",
-   "summary": "Difficulties in transporting animals since Brexit has contributed to the decline in the number of captive birds.",
+   "category": "Sports",
+   "headline": "Manasi-Thulasimathi make semis, assure India of para badminton medal",
+   "summary": "With both losing semifinalists assured of bronze, the victory guaranteed India a place on the podium",
    "why_it_matters": "",
-   "source": "BBC News",
-   "url": "https://www.bbc.co.uk/news/articles/c6m24e1ln130o?at_medium=RSS&at_campaign=rss",
-   "published": "2026-10-17T05:10:33+00:00"
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/sport/manasi-thulasimathi-make-semis-assure-india-of-para-badminton-medal/article71597854.ece",
+   "top": false,
+   "published": "2026-10-17T21:17:50+00:00"
+  },
+  {
+   "category": "Food",
+   "headline": "‘If AI were asked to make miso, it would taste like this’: the best (and worst) supermarket miso, tasted and rated",
+   "summary": "We ran supermarket pastes through the ‘soup test’ to find out which ones have an authentic flavour and which are nothing like the real thing• The best supermarket kimchiMiso is a simple product that’s traditionally made ",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/thefilter/2026/oct/17/best-worst-supermarket-miso-tasted-rated",
+   "top": false,
+   "published": "2026-10-17T12:00:30+00:00"
+  },
+  {
+   "category": "Food",
+   "headline": "Jackson Boxer’s vegan recipe for poached leeks with pickled pear and hazelnuts",
+   "summary": "Poach your leeks to perfection, then pair with pickled pears and nutty misoI have a great respect for the leek, which is possibly the most demanding vegetable in its need to be freshly cooked before consumption. A warm l",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/food/2026/oct/17/poached-leeks-pickled-pear-hazelnuts-vegan-recipe-jackson-boxer",
+   "top": false,
+   "published": "2026-10-17T05:00:25+00:00"
+  },
+  {
+   "category": "Food",
+   "headline": "Cocktail of the week: Àclèaf’s PX martini – recipe | The good mixer",
+   "summary": "Like a classic espresso martini, but with the addition of vanilla vodka This is our twist on the much-loved classic. It takes inspiration from a classic espresso martini, with the addition of vanilla vodka bringing with ",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/food/2026/oct/16/px-martini-recipe-cocktail-of-the-week-acleaf",
+   "top": false,
+   "published": "2026-10-16T12:00:10+00:00"
+  },
+  {
+   "category": "Food",
+   "headline": "Helen Goh’s recipe for baked oats with morello cherries and almond | The sweet spot",
+   "summary": "This moreish, flapjack-style oaty bake, flavoured with maple syrup and dotted with sour cherries, works as well for dessert as it does for breakfastI’ve been making versions of these baked oats ever since discovering Hei",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/food/2026/oct/16/baked-oats-morello-cherries-almond-recipe-helen-goh",
+   "top": false,
+   "published": "2026-10-16T05:00:52+00:00"
+  },
+  {
+   "category": "Food",
+   "headline": "Navratri special thalis in Visakhapatnam: Festive menus at hotels",
+   "summary": "From fasting-friendly favourites to traditional festive fare, hotels in Visakhapatnam bring a variety of flavours to the table this Navratri",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/life-and-style/food/navratri-special-thalis-in-visakhapatnam-festive-menus-at-hotels/article71586941.ece",
+   "top": false,
+   "published": "2026-10-15T15:33:51+00:00"
+  },
+  {
+   "category": "Travel",
+   "headline": "Durga puja 2026: Skip the Kolkata queues with luxury tours",
+   "summary": "From convoy-led pandal-hopping to cruises on the Ganga, this year curated Durga puja tours aim to offer visitors easier access to the city, encouraging them to look beyond Howrah Bridge and experience Kolkata’s cultural ",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/life-and-style/durga-puja-2026-skip-the-kolkata-queues-with-luxury-tours/article71587219.ece",
+   "top": false,
+   "published": "2026-10-17T03:50:30+00:00"
+  },
+  {
+   "category": "Travel",
+   "headline": "Go on a journey to the headwaters of the Manimala river",
+   "summary": "Organised by Roots&Roads, a cultural and heritage collective, the two-day trail explores the river across its tributaries",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/society/history-and-culture/go-on-a-journey-to-the-headwaters-of-the-manimala-river/article71558820.ece",
+   "top": false,
+   "published": "2026-10-15T16:25:55+00:00"
+  },
+  {
+   "category": "Travel",
+   "headline": "Wildlife photography exhibition opens at Hawa Mahal in Visakhapatnam",
+   "summary": "Nearly 150 photographs by 25 wildlife photographers showcase India’s biodiversity, landscapes and wildlife as part of World Wildlife Week 2026",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/news/cities/Visakhapatnam/wildlife-photography-exhibition-opens-at-hawa-mahal-in-visakhapatnam/article71540803.ece",
+   "top": false,
+   "published": "2026-10-15T15:34:13+00:00"
+  },
+  {
+   "category": "Travel",
+   "headline": "When gods walk at dawn: A traveller’s guide to experiencing Theyyam in North Kerala",
+   "summary": "In Kavvayi, 40 kilometres from Kannur, a man becomes a ‘god’. For visitors willing to trade sleep for firelight, the Kaliyattam festival at the Sree Kathivanoor Veeran temple offers one of Kerala’s most intense cultural ",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/society/when-gods-walk-at-dawn-a-travellers-guide-to-experiencing-theyyam-in-north-kerala/article70607574.ece",
+   "top": false,
+   "published": "2026-10-15T08:46:47+00:00"
+  },
+  {
+   "category": "Lifestyle",
+   "headline": "The moment I knew: For Valentine’s Day he gave me a heart covered in fake blood. I was appalled – and thrilled",
+   "summary": "Will Huxley thought Garrett looked like a Heathcliff type. They bonded over their shared love of Kate Bush. Then one day Garrett handed over an ornate gift boxFind more stories from the moment I knew seriesIn 2006 I’d ju",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/lifeandstyle/2026/oct/18/the-moment-i-knew-for-valentines-day-he-gave-me-a-cows-heart",
+   "top": false,
+   "published": "2026-10-17T19:00:39+00:00"
+  },
+  {
+   "category": "Lifestyle",
+   "headline": "Alexandra Shulman: ‘Which book am I ashamed not to have read? Literally the whole canon of classic English literature’",
+   "summary": "The former British Vogue editor-in-chief and author on a romantic kiss on a traffic island, her school-run regrets, and a very expensive nudeBorn in London, Alexandra Shulman, 68, studied social anthropology at the Unive",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/lifeandstyle/2026/oct/17/alexandra-shulman-fashion-journalist-interview-former-british-vogue-author",
+   "top": false,
+   "published": "2026-10-17T09:00:26+00:00"
+  },
+  {
+   "category": "Lifestyle",
+   "headline": "On the fragrant kumkum and its legacy",
+   "summary": "The thaale hoovu or thazhampoo is used in the creation of a special blend of kumkum, and Navaratri is when one can look forward to its abundant use",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/life-and-style/on-the-fragrant-kumkum-and-its-legacy/article71582556.ece",
+   "top": false,
+   "published": "2026-10-17T06:22:25+00:00"
+  },
+  {
+   "category": "Lifestyle",
+   "headline": "Which coffee chain was founded in London in 1971? The Saturday quiz",
+   "summary": "From Divine, Frank Fiegel and Helen Kane to the West Sussex estate pioneering rewilding, test your knowledge with the Saturday quiz1 Which classic of political theory was dedicated to Lorenzo de Medici? 2 What is the onl",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/games/2026/oct/17/which-coffee-chain-was-founded-in-london-in-1971-the-saturday-quiz",
+   "top": false,
+   "published": "2026-10-17T06:00:24+00:00"
+  },
+  {
+   "category": "Opinion",
+   "headline": "If Trump becomes a lame duck, surely countries like Australia can say what we really think? | Zoe Daniel",
+   "summary": "For years everyone has been dancing around Trump’s unpredictability, his bullying and his threats. It’s past time to reassert our valuesIn two weeks, Donald Trump faces his moment of truth; transformational midterm elect",
+   "why_it_matters": "",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/commentisfree/2026/oct/18/trump-lame-duck-us-midterm-elections-australia",
+   "top": false,
+   "published": "2026-10-17T19:00:41+00:00"
+  },
+  {
+   "category": "Opinion",
+   "headline": "Why India needs to rethink what happens after a road crash",
+   "summary": "On World Trauma Day, October 17, India needs to think about stronger coordination between emergency services, hospitals, and public authorities, supported by reliable referral pathways and trauma-care protocols",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/opinion/op-ed/why-india-needs-to-rethink-what-happens-after-a-road-crash/article71593799.ece",
+   "top": false,
+   "published": "2026-10-17T15:26:51+00:00"
+  },
+  {
+   "category": "Opinion",
+   "headline": "At sixes and sevens, the ECI’s growing credibility crisis",
+   "summary": "The Election Commission of India’s actions and questions around Forms 6 and 7 deepen doubts about its impartiality and transparency",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/opinion/lead/at-sixes-and-sevens-the-ecis-growing-credibility-crisis/article71576568.ece",
+   "top": false,
+   "published": "2026-10-17T15:14:22+00:00"
+  },
+  {
+   "category": "Opinion",
+   "headline": "Privacy and transparency: On the RTI Act amendment, petitions",
+   "summary": "There must be no information asymmetry between state and citizens",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/opinion/editorial/privacy-and-transparency-on-the-rti-act-amendment-petitions/article70652568.ece",
+   "top": false,
+   "published": "2026-10-17T15:02:26+00:00"
+  },
+  {
+   "category": "Opinion",
+   "headline": "Letters to The Editor — October 13, 2026",
+   "summary": "",
+   "why_it_matters": "",
+   "source": "The Hindu",
+   "url": "https://www.thehindu.com/opinion/letters/letters-to-the-editor-october-13-2026/article71576351.ece",
+   "top": false,
+   "published": "2026-10-17T14:19:23+00:00"
   }
  ],
  "context": [
@@ -141,7 +1191,8 @@
      "Fastest hikes in decades to fight inflation"
     ]
    ],
-   "w": "Understanding the cycle makes rate headlines easier to judge."
+   "w": "Understanding the cycle makes rate headlines easier to judge.",
+   "cat": "Finance"
   },
   {
    "c": "Did you know",
@@ -161,7 +1212,29 @@
      "Talks shift to damage and resilience funds"
     ]
    ],
-   "w": "Explains why funding deals matter even before the numbers."
+   "w": "Explains why funding deals matter even before the numbers.",
+   "cat": "Climate & Energy"
+  },
+  {
+   "c": "Background",
+   "cat": "Governance",
+   "h": "How a bill becomes law in India",
+   "s": "A bill is introduced in either House, debated, sent to committees if needed, passed by both Houses, then approved by the President.",
+   "tl": [
+    [
+     "Step 1",
+     "Introduction and first reading"
+    ],
+    [
+     "Step 2",
+     "Committee review and debate"
+    ],
+    [
+     "Step 3",
+     "Passed by both Houses, then Presidential assent"
+    ]
+   ],
+   "w": "Helps you follow where new policies actually stand."
   }
  ]
 }
