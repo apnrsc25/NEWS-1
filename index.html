@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>सारांश · Saransh</title>
+<meta name="application-name" content="Saransh">
+<meta name="apple-mobile-web-app-title" content="Saransh">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#1d4ed8">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+:root{--bg:#eaf2fc;--card:#fff;--ink:#0b1b33;--mute:#587091;--line:#d3e1f3;--acc:#1d4ed8;--acc2:#0ea5e9;--soft:#e3eeff;--ctx:#dbeafe;--ctxink:#1e3a8a;--sh:0 10px 30px rgba(29,78,216,.10);--fs:16px;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#081426;--card:#0f2038;--ink:#e6efff;--mute:#8fa8cb;--line:#1c3558;--acc:#60a5fa;--acc2:#38bdf8;--soft:#13294a;--ctx:#12294d;--ctxink:#93c5fd;--sh:0 10px 30px rgba(0,0,0,.35);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#081426;--card:#0f2038;--ink:#e6efff;--mute:#8fa8cb;--line:#1c3558;--acc:#60a5fa;--acc2:#38bdf8;--soft:#13294a;--ctx:#12294d;--ctxink:#93c5fd;--sh:0 10px 30px rgba(0,0,0,.35);color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;overflow-x:hidden;color:var(--ink);font:var(--fs)/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh;background:radial-gradient(900px 380px at 50% -80px,color-mix(in srgb,var(--acc2) 22%,transparent),transparent),var(--bg)}
+.app{max-width:520px;margin:0 auto;padding:14px}
+.btn{display:inline-block;background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:7px 13px;font:inherit;font-size:.82em;cursor:pointer;white-space:nowrap;text-decoration:none}
+.btn.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.btn.sm{padding:5px 11px;font-size:.78em;background:var(--soft);border-color:transparent;color:var(--acc)}
+.hero{background:linear-gradient(135deg,#1e3a8a,#2563eb 62%,#38bdf8);color:#fff;border-radius:22px;padding:16px 16px 14px;box-shadow:var(--sh)}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.brand h1{margin:0;font:800 2em/1.1 "Noto Sans Devanagari","Nirmala UI","Mangal",system-ui,sans-serif}
+.brand span{font-size:.72em;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+.tools{display:flex;gap:6px}
+.tools .btn{background:rgba(255,255,255,.16);border-color:transparent;color:#fff;padding:6px 10px}
+.date{font-size:.78em;opacity:.85;margin-top:8px}
+.greet{font-size:.9em;margin-top:2px;font-weight:600}
+.pill{display:inline-block;background:rgba(255,255,255,.2);border-radius:999px;padding:1px 9px;margin-left:4px;font-size:.85em}
+.prog{margin:12px 0 5px;height:6px;background:rgba(255,255,255,.25);border-radius:9px;overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:#fff;border-radius:9px;transition:width .3s}
+.meta{display:flex;justify-content:space-between;font-size:.74em;opacity:.9}
+.bar{display:flex;gap:8px;margin:12px 0}
+.bar .btn{flex:1;overflow:hidden;text-overflow:ellipsis}
+#mapbtn{flex:2}
+#stage{overflow-x:clip}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;min-height:380px;display:flex;flex-direction:column;touch-action:pan-y;box-shadow:var(--sh);will-change:transform}
+.card.ctx{background:linear-gradient(160deg,var(--ctx),var(--card))}
+.tag{align-self:flex-start;font-size:.72em;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--acc);background:var(--soft);padding:3px 10px;border-radius:999px}
+.ctx .tag{color:var(--ctxink)}
+.card h2{font:700 1.5em/1.28 Georgia,serif;margin:12px 0}
+.card p{margin:0 0 12px}
+.tl{margin:6px 0 10px;padding:0;list-style:none;font-size:.88em}
+.tl li{padding:4px 0 4px 14px;border-left:2px solid var(--ctxink)}
+.tl b{color:var(--ctxink)}
+.acts{margin-top:auto;display:flex;gap:6px;flex-wrap:wrap;padding-top:14px}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:8px;color:var(--mute);font-size:.75em;padding-top:10px;margin-top:10px;border-top:1px solid var(--line)}
+.foot a{color:var(--acc);text-decoration:none;white-space:nowrap;font-weight:600}
+.badge{color:var(--acc);font-weight:700}
+.nav{display:flex;gap:10px;margin-top:14px}
+.nav .btn{flex:1;padding:13px;font-size:.95em;text-align:center}
+.nav .main{background:linear-gradient(135deg,#1d4ed8,#0ea5e9);border:0;color:#fff;font-weight:600}
+.note{color:var(--mute);font-size:.72em;text-align:center;margin-top:14px}
+.done{text-align:center;justify-content:center;align-items:center}
+.done h2{font-size:1.8em}
+#sheet{position:fixed;inset:0;background:rgba(3,10,25,.55);z-index:20;display:flex;align-items:flex-end;justify-content:center}
+#sheet[hidden]{display:none}
+.sheet{background:var(--bg);width:100%;max-width:520px;max-height:95vh;overflow:auto;border-radius:22px 22px 0 0;padding:12px 12px calc(12px + env(safe-area-inset-bottom,0px))}
+.sh{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.sh small{color:var(--mute);font-weight:400;font-size:.72em;margin-left:6px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.tile{position:relative;overflow:hidden;border:1px solid var(--line);background:var(--card);border-radius:12px;padding:8px 9px 10px;cursor:pointer;font-size:.8em;line-height:1.25;min-height:58px}
+.tile b{display:block;padding-right:14px}
+.tile small{display:block;color:var(--mute);font-size:.88em;margin-top:2px}
+.tile i{position:absolute;left:0;bottom:0;height:3px;background:var(--acc)}
+.tile.cur{border-color:var(--acc);box-shadow:inset 0 0 0 1.5px var(--acc)}
+.tile.cov{background:linear-gradient(135deg,#1d4ed8,#0ea5e9);border-color:transparent;color:#fff}
+.tile.cov small{color:#fff;font-weight:700}
+.tile.cov i{background:rgba(255,255,255,.55)}
+.fol{position:absolute;top:4px;right:6px;font-size:1em;color:var(--acc);line-height:1}
+.tile.cov .fol{color:#fff}
+.qi{width:100%;padding:12px 14px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;margin-bottom:10px}
+.res{display:block;width:100%;text-align:left;background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:12px;padding:10px 12px;margin-bottom:6px;font:inherit;font-size:.88em;cursor:pointer}
+.res small{color:var(--acc);font-weight:700;display:block}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="hero">
+ <div class="top"><div class="brand"><h1>सारांश</h1><span>Saransh · news in minutes</span></div>
+ <div class="tools"><button class="btn" id="fsb" title="Text size">Aa</button><button class="btn" id="theme" title="Theme">◐</button></div></div>
+ <div class="date" id="date"></div><div class="greet" id="greet"></div>
+ <div class="prog"><i id="bar"></i></div>
+ <div class="meta"><span id="count"></span><span id="left"></span></div>
+</div>
+<div class="bar"><button class="btn" id="mapbtn">☰ Categories</button><button class="btn" id="srch">🔍 Search</button><button class="btn" id="saved">🔖 Saved (0)</button></div>
+<div id="stage"></div>
+<div class="nav"><button class="btn" id="prev">← Back</button><button class="btn main" id="next">Next →</button></div>
+<div id="sheet" hidden><div class="sheet"><div class="sh"><span><b id="shtitle"></b><small id="shsub"></small></span><button class="btn" id="sx">✕ Close</button></div><div id="shbody"></div></div></div>
+<div class="note" id="note">Swipe left/right or use ← → keys. Showing sample stories (news.json not found).</div>
+</div>
+<script>
+const SAMPLE=[
+{c:"World",top:1,h:"Regional leaders agree on a shared climate-finance framework",s:"Delegates from several nations signed a framework to pool funds for flood and heat resilience. Contribution details are still to be finalised.",src:"Sample +2",t:"2h"},
+{c:"Business",top:1,h:"Central bank holds rates steady, signals cautious outlook",s:"The policy rate was left unchanged as inflation eased but stayed above target. Future moves depend on incoming data.",src:"Sample",t:"3h"},
+{c:"Technology",top:1,h:"New open-source AI model released for on-device use",s:"A compact language model now runs on mid-range phones without a network connection. Early tests show strong speed but limited reasoning depth.",src:"Sample",t:"5h"},
+{c:"Science",top:1,h:"Telescope team reports a new batch of distant galaxies",s:"Astronomers catalogued dozens of faint early-universe galaxies, helping test how fast the first stars formed.",src:"Sample",t:"6h"}];
+const CTX=[{c:"Background",cat:"Business",h:"How central banks set interest rates",s:"Banks raise rates to cool prices and cut them to spur growth. It works with a delay, often 6 to 18 months.",tl:[["1970s","High inflation forces aggressive rate hikes"],["2008","Rates cut near zero after the financial crisis"],["2022","Fastest hikes in decades"]]}];
+const $=id=>document.getElementById(id);
+const LS={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const E=t=>String(t==null?"":t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const dec=s=>{const t=document.createElement("textarea");t.innerHTML=s;return t.value};
+const td=()=>new Date().toLocaleDateString("en-CA"),yest=()=>new Date(Date.now()-864e5).toLocaleDateString("en-CA");
+let NEWS=SAMPLE,CTXL=CTX,cat="Top",idx=0,onlySaved=false,q="",busy=false,fs=LS.get("sar-fs",1);
+let saved=new Set(LS.get("sar-saved",[])),read=new Set(LS.get("sar-read",[])),follow=new Set(LS.get("sar-follow",[])),streak=LS.get("sar-streak",{last:"",n:0});
+const SIZES=[14,16,18.5];
+const applyFs=()=>document.documentElement.style.setProperty("--fs",SIZES[fs]+"px");
+applyFs();{const t=LS.get("sar-theme","");if(t)document.documentElement.dataset.theme=t}
+$("date").textContent=new Date().toLocaleDateString(undefined,{weekday:"long",day:"numeric",month:"long"});
+const match=s=>{s=E(s).toLowerCase();return NEWS.filter(n=>(n.h+" "+n.s+" "+n.c).toLowerCase().includes(s))};
+const cats=()=>[...new Set(NEWS.map(n=>n.c))];
+function listFor(c){
+ if(c==="Search")return match(q);
+ if(c==="Learn")return CTXL.map(x=>({...x,type:"ctx"}));
+ if(c==="You"){const o=[];follow.forEach(f=>o.push(...NEWS.filter(n=>n.c===f).slice(0,3)));return o}
+ const base=NEWS.filter(n=>c==="Top"?n.top:n.c===c);
+ const cx=CTXL.filter(x=>c==="Top"||x.cat===c).map(x=>({...x,type:"ctx"}));
+ if(c!=="Top")return base.concat(cx);
+ const o=[];let ci=0;base.forEach((n,i)=>{o.push(n);if((i+1)%4===0&&ci<cx.length)o.push(cx[ci++])});return o}
+const list=()=>onlySaved?NEWS.filter(n=>saved.has(n.h)):listFor(cat);
+const covered=c=>{const L=listFor(c);return L.length>0&&L.every(x=>read.has(x.h))};
+const label=c=>({Top:"★ Top brief",You:"♥ For you",Learn:"💡 Learn"}[c]||c);
+function greet(){
+ const left=NEWS.filter(n=>n.top&&!read.has(n.h)).length,alive=(streak.last===td()||streak.last===yest())?streak.n:0;
+ $("greet").innerHTML=(left?left+" left in today’s brief · ~"+Math.max(1,Math.round(left*.5))+" min":"Today’s brief complete ✓")+(alive?'<span class="pill">🔥 '+alive+'-day streak</span>':"")}
+function bump(){if(streak.last===td())return;streak={n:streak.last===yest()?streak.n+1:1,last:td()};LS.set("sar-streak",streak)}
+function markRead(h){if(read.has(h))return;read.add(h);LS.set("sar-read",[...read].slice(-2500))}
+function enter(c){cat=c;onlySaved=false;const L=list(),u=L.findIndex(x=>!read.has(x.h));idx=c==="Search"?0:(u<0?L.length:u);render()}
+function render(){
+ if("speechSynthesis" in window)speechSynthesis.cancel();
+ const L=list(),n=L.length;$("saved").textContent="🔖 Saved ("+saved.size+")";$("saved").classList.toggle("on",onlySaved);
+ $("mapbtn").textContent="☰ "+(onlySaved?"Saved":cat==="Search"?"Search results":label(cat))+" ▾";
+ if(idx>=n){
+  if(cat==="Top"&&!onlySaved&&n)bump();greet();
+  const alive=(streak.last===td()||streak.last===yest())?streak.n:0;
+  const nx=["Top",...cats()].find(c=>c!==cat&&covered(c)===false&&listFor(c).length);
+  $("stage").innerHTML='<div class="card done"><div class="tag">'+(n?"Covered ✓":"Nothing here")+'</div><h2>'+(n?"You’re up to date":"No cards yet")+'</h2><p>'+(n?n+" cards in "+(onlySaved?"Saved":label(cat))+". ":"")+(cat==="Top"&&alive?"🔥 "+alive+"-day streak. ":"")+'</p><p>'+(nx?'<button class="btn on" id="nextcat">Next: '+label(nx)+' →</button> ':'<b>All categories covered 🎉</b> ')+'<button class="btn" id="explore">☰ Categories</button> <button class="btn" id="again">↺ Review</button></p></div>';
+  if(nx)$("nextcat").onclick=()=>enter(nx);
+  $("explore").onclick=openCats;$("again").onclick=()=>{idx=0;render()};
+  $("bar").style.width="100%";$("count").textContent=n+" / "+n;$("left").textContent="Done";$("next").textContent="Next →";return}
+ const x=L[idx],ty=x.type||"news";markRead(x.h);greet();
+ $("bar").style.width=(idx/Math.max(n,1)*100)+"%";$("count").textContent=(idx+1)+" / "+n;$("left").textContent="~"+Math.max(1,Math.ceil((n-idx)*0.5))+" min left";
+ const tl=x.tl?'<ul class="tl">'+x.tl.map(r=>"<li><b>"+r[0]+"</b> — "+r[1]+"</li>").join("")+"</ul>":"";
+ const sm=/^(.*?)(?: \+(\d+))?$/.exec(x.src||"");
+ const left=x.src?x.t+(/^\d/.test(x.t)?" ago":"")+(sm[2]?' · <span class="badge">✔ '+(+sm[2]+1)+' outlets</span>':""):"Background";
+ const right=x.src?(x.url?'<a href="'+x.url+'" target="_blank" rel="noopener">Source: '+sm[1]+' ↗</a>':"Source: "+sm[1]):"";
+ const km="https://www.google.com/search?q="+encodeURIComponent(dec(x.h));
+ $("stage").innerHTML='<div class="card '+ty+'"><div class="tag">'+x.c+(ty==="news"&&cat==="Top"?" · Top":"")+'</div><h2>'+x.h+'</h2><p>'+x.s+'</p>'+tl+'<div class="acts"><a class="btn sm" href="'+km+'" target="_blank" rel="noopener">🔎 Know more</a><button class="btn sm" id="listen">🔊 Listen</button><button class="btn sm" id="share">↗ Share</button><button class="btn sm" id="save">'+(saved.has(x.h)?"★ Saved":"☆ Save")+'</button></div><div class="foot"><span>'+left+'</span><span>'+right+'</span></div></div>';
+ $("save").onclick=()=>{saved.has(x.h)?saved.delete(x.h):saved.add(x.h);LS.set("sar-saved",[...saved]);render()};
+ $("listen").onclick=()=>{if(!("speechSynthesis" in window))return;if(speechSynthesis.speaking){speechSynthesis.cancel();return}const u=new SpeechSynthesisUtterance(dec(x.h)+". "+dec(x.s));u.lang="en-IN";speechSynthesis.speak(u)};
+ $("share").onclick=async()=>{const t=dec(x.h)+" — "+dec(x.s),u=x.url?dec(x.url):location.href;try{if(navigator.share)await navigator.share({title:dec(x.h),text:t,url:u});else{await navigator.clipboard.writeText(t+" "+u);$("share").textContent="Copied ✓"}}catch(e){}};
+ $("next").textContent=idx===n-1?"Finish ✓":"Next →"}
+function go(d){idx=Math.min(Math.max(0,idx+d),list().length);render()}
+function swipe(d){
+ if(busy)return false;const n=list().length;if(idx+d<0||(d>0&&idx>=n))return false;
+ const c=$("stage").firstElementChild;
+ if(!c||matchMedia("(prefers-reduced-motion:reduce)").matches){go(d);return true}
+ busy=true;c.style.transition="transform .22s ease-in,opacity .22s ease-in";c.style.transform="translateX("+(d>0?-120:120)+"%) rotate("+(d>0?-8:8)+"deg)";c.style.opacity="0";
+ setTimeout(()=>{go(d);const m=$("stage").firstElementChild;if(m){m.style.transition="none";m.style.transform="translateX("+(d>0?60:-60)+"%)";m.style.opacity="0";void m.offsetWidth;m.style.transition="transform .26s ease-out,opacity .26s ease-out";m.style.transform="";m.style.opacity=""}busy=false},210);return true}
+function openSheet(t,sub){$("shtitle").textContent=t;$("shsub").textContent=sub||"";$("sheet").hidden=false}
+function closeSheet(){$("sheet").hidden=true;greet()}
+function openCats(){
+ openSheet("Categories","☆ follow = “For you” brief");$("shbody").innerHTML='<div class="grid" id="grid"></div>';
+ const g=$("grid");
+ const tile=(c,fol)=>{const L=listFor(c),r=L.filter(x=>read.has(x.h)).length,full=L.length>0&&r===L.length;
+  const d=document.createElement("div");d.className="tile"+(full?" cov":"")+(c===cat&&!onlySaved?" cur":"");d.tabIndex=0;
+  d.innerHTML="<b>"+label(c)+"</b><small>"+(full?"✓ Covered":r+" / "+L.length)+"</small><i style='width:"+(L.length?r/L.length*100:0)+"%'></i>"+(fol?'<span class="fol">'+(follow.has(c)?"★":"☆")+"</span>":"");
+  d.onclick=()=>{$("sheet").hidden=true;enter(c)};
+  if(fol)d.querySelector(".fol").onclick=e=>{e.stopPropagation();follow.has(c)?follow.delete(c):follow.add(c);LS.set("sar-follow",[...follow]);e.target.textContent=follow.has(c)?"★":"☆"};
+  g.appendChild(d)};
+ tile("Top");if(follow.size)tile("You");tile("Learn");cats().forEach(c=>tile(c,true))}
+function openSearch(){
+ openSheet("Search");$("shbody").innerHTML='<input id="qi" class="qi" placeholder="Search all stories…" autocomplete="off"><div id="qr"></div>';
+ const qi=$("qi"),upd=()=>{const s=qi.value.trim(),m=s.length>1?match(s):[];$("qr").innerHTML="";
+  if(s.length>1&&!m.length)$("qr").innerHTML='<p style="color:var(--mute);font-size:.85em">No matches.</p>';
+  m.slice(0,10).forEach(n=>{const b=document.createElement("button");b.className="res";b.innerHTML="<small>"+n.c+"</small>"+n.h;
+   b.onclick=()=>{q=s;cat="Search";onlySaved=false;idx=match(s).findIndex(z=>z.h===n.h);$("sheet").hidden=true;render()};$("qr").appendChild(b)});
+  if(m.length>10){const b=document.createElement("button");b.className="btn on";b.textContent="Show all "+m.length+" results";b.onclick=()=>{q=s;$("sheet").hidden=true;enter("Search")};$("qr").appendChild(b)}};
+ qi.oninput=upd;qi.focus()}
+$("next").onclick=()=>swipe(1);$("prev").onclick=()=>swipe(-1);
+$("saved").onclick=()=>{onlySaved=!onlySaved;idx=0;render()};
+$("mapbtn").onclick=openCats;$("srch").onclick=openSearch;$("sx").onclick=closeSheet;
+$("sheet").addEventListener("click",e=>{if(e.target.id==="sheet")closeSheet()});
+$("fsb").onclick=()=>{fs=(fs+1)%3;LS.set("sar-fs",fs);applyFs()};
+$("theme").onclick=()=>{const r=document.documentElement,dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=dark?"light":"dark";LS.set("sar-theme",r.dataset.theme)};
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeSheet();if($("sheet").hidden&&document.activeElement.tagName!=="INPUT"){if(e.key==="ArrowRight")swipe(1);if(e.key==="ArrowLeft")swipe(-1)}});
+let sx=null,sy=0,dx=0,drag=false;const st=$("stage");
+st.addEventListener("touchstart",e=>{sx=e.touches[0].clientX;sy=e.touches[0].clientY;dx=0;drag=false},{passive:true});
+st.addEventListener("touchmove",e=>{if(sx===null||busy)return;dx=e.touches[0].clientX-sx;const dy=e.touches[0].clientY-sy;if(!drag&&Math.abs(dx)>10&&Math.abs(dx)>Math.abs(dy))drag=true;const c=st.firstElementChild;if(drag&&c){c.style.transition="none";c.style.transform="translateX("+dx+"px) rotate("+dx/30+"deg)";c.style.opacity=String(1-Math.min(Math.abs(dx)/450,.45))}},{passive:true});
+st.addEventListener("touchend",()=>{if(sx===null)return;const c=st.firstElementChild;if(!(drag&&Math.abs(dx)>70&&swipe(dx<0?1:-1))&&c){c.style.transition="transform .2s,opacity .2s";c.style.transform="";c.style.opacity=""}sx=null;drag=false});
+function ago(p){const m=(Date.now()-new Date(p))/6e4;if(!(m>=0))return"recently";return m<60?Math.round(m)+"m":m<1440?Math.round(m/60)+"h":Math.round(m/1440)+"d"}
+render();
+fetch("news.json?"+Date.now()).then(r=>r.ok?r.json():Promise.reject()).then(d=>{
+ if(!d.items||!d.items.length)return;
+ NEWS=d.items.map(i=>({c:E(i.category),top:!!i.top,h:E(i.headline),s:E(i.summary),src:E(i.source),t:ago(i.published),url:/^https?:/.test(i.url||"")?E(i.url):""}));
+ if(d.context&&d.context.length)CTXL=d.context.map(c=>({c:E(c.c),cat:E(c.cat||""),h:E(c.h),s:E(c.s),tl:(c.tl||[]).map(r=>[E(r[0]),E(r[1])])}));
+ if(!NEWS.some(n=>n.top))NEWS.slice(0,12).forEach(n=>n.top=true);
+ enter("Top");
+ $("note").textContent="Live · "+NEWS.length+" stories · "+cats().length+" categories · updated "+new Date(d.updated).toLocaleString()}).catch(()=>{});
+if("serviceWorker" in navigator&&location.protocol.startsWith("http"))navigator.serviceWorker.register("sw.js").catch(()=>{});
+</script>
+</body>
+</html>
