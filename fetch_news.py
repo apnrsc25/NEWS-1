@@ -46,9 +46,8 @@ NAMES = {"bbci.co.uk": "BBC", "theguardian.com": "The Guardian", "thehindu.com":
 PER_CAT, TOP_N, TOP_PER_CAT, MAX_AGE_H, CHUNK = 15, 12, 2, 168, 25   # 15 cards/category, 7-day window
 MODEL = os.getenv("MODEL", "claude-haiku-5-5")
 PROMPT = ("You are a neutral news editor. For each story write: headline (max 90 chars), "
- "summary (2-3 sentences, max 55 words, ONLY facts present in the input - add nothing), "
- "why_it_matters (one plain sentence, max 20 words). "
- "Return ONLY a JSON array of {id, headline, summary, why_it_matters}.\nStories:\n")
+ "summary (2-3 sentences, max 60 words, ONLY facts present in the input - add nothing). "
+ "Return ONLY a JSON array of {id, headline, summary}.\nStories:\n")
 
 clean = lambda t: re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", html.unescape(t or ""))).strip()
 words = lambda t: {w for w in re.findall(r"[a-z0-9]+", t.lower()) if len(w) > 3}
@@ -105,7 +104,7 @@ def select(groups):
     cards = []
     for g in ordered:
         it = g["item"]
-        cards.append(dict(category=it["category"], headline=it["title"], summary=it["snippet"][:220], why_it_matters="",
+        cards.append(dict(category=it["category"], headline=it["title"], summary=it["snippet"][:220],
             source=it["source"] + (f" +{len(g['srcs'])-1}" if len(g["srcs"]) > 1 else ""), url=it["url"], top=id(g) in ids,
             published=dt.datetime.fromtimestamp(it["ts"], dt.timezone.utc).isoformat()))
     return cards
@@ -122,7 +121,7 @@ def summarise(cards):
             msg = client.messages.create(model=MODEL, max_tokens=4500, messages=[{"role": "user", "content": PROMPT + json.dumps(src)}])
             for d in json.loads(re.search(r"\[.*\]", msg.content[0].text, re.S).group(0)):
                 if isinstance(d.get("id"), int) and 0 <= d["id"] < len(part):
-                    for k in ("headline", "summary", "why_it_matters"):
+                    for k in ("headline", "summary"):
                         if d.get(k): part[d["id"]][k] = d[k]
         except Exception as ex:
             print(f"LLM chunk {s//CHUNK} failed, raw snippets kept:", ex)
